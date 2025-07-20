@@ -1,0 +1,379 @@
+/* === Global Font Reset (force larger text everywhere) === */
+body,
+td,
+th,
+div,
+span,
+p,
+input,
+select,
+textarea,
+button {
+  font-size: 1.125rem !important;  /* 18px */
+  color: #1c1c1c;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* === Links Elsewhere (turn off blue) === */
+a,
+a:visited,
+.navlink a,
+.navlink a:visited,
+.list-group-item a {
+  color: #393636 !important;
+  font-size: 1.125rem !important;
+}
+a:hover {
+  color: #cc0000 !important;
+}
+
+/* a, a:visited, .navlink a, .navlink a:visited, .list-group-item a {
+    color: rgb(57, 54, 54) !important;
+    font-size: 1.125rem !important;
+} */
+
+/* a, a:visited, .navlink a, .navlink a:visited, .list-group-item a {
+    color: #393636 !important;
+    font-size: 1.125rem !important;
+} */
+
+.navlink > a {
+    color: #ffd700;
+    position: relative;
+    display: block;
+    padding: 4px 15px;
+}
+/* .navlink {
+    color: #ffd700;
+}
+.navlink {
+    color: #ffd700;
+} */
+.navlink {
+    color: #ffd700;
+    font-size: 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.page-title {
+  font-size: 36px !important;   /* Much larger */
+  font-weight: bold;
+  text-align: center;            /* or 'left' if you prefer */
+  padding: 8pt 8pt !important; /* top/bottom and side padding */
+  margin: 0 auto 20px auto;      /* space below the title */
+  color: #000000;                /* optional: better contrast on dark backgrounds */
+}
+
+/* === Buttons and Forms === */
+button,
+input[type="submit"],
+.Button,
+.StandardButton,
+input,
+select,
+textarea {
+  font-size: 12px !important;
+  padding: 0.6rem 1rem !important;
+}
+
+/* === Menu/List Items (like sidebar nav) === */
+.list-group-item {
+  padding: 14px 20px !important;
+  font-size: 1.125rem !important;
+}
+
+/* === Divider lines for visual structure === */
+hr, .divider {
+  border: none;
+  border-top: 2px solid #eaeaea;
+  margin: 2rem 0;
+}
+
+body
+{
+ background-color:#FFF;
+}
+
+.form-control
+{
+ background-color:#eaeaea;
+}
+
+/* Asterisk that appears in front of required fields */
+.RequiredIndicator
+{
+  color:red;
+}
+
+/* Menu icon in top left corner of page */
+.navicon
+{
+  background-color:#cc0000; 
+  color:#FFF; 
+}
+
+
+/* === Headings & Section Titles === */
+h1, h2, h3, h4, h5, h6, .PageTitle, .SectionHeader {
+  text-align: center; /* or use left if you prefer */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #cc0000;
+}
+
+/* Top banner, which only appears on home page */
+.banner-div
+{
+  background-color:#393636;
+}
+
+/* Grid outlines  */
+.table-curved {
+    border-color: #ccc;
+}
+.table-curved td, .table-curved th {
+    border-left-color: #ccc;
+    border-top-color: #ccc;
+}
+
+/* Grid heading */
+.table-striped > thead > tr {
+  background-color: #393636;
+  color: #FFF;
+}
+
+.table-striped > thead > tr > th > a {
+  color: #FFF;
+}
+
+/* Grid body */
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #FFF;
+}
+
+/* Grid footer */
+.table-striped > tfoot > tr {
+  background-color: #999;
+}
+
+/* Group name displayed at top left of page, which is a link to the home page */
+.nav-home-link
+{
+  color:white;
+}
+
+/* Tabs */
+.nav-tabs > li > a,
+.nav-tabs-bottom > li > a {
+  border-color:#ddd;
+  background-color:#eaeaea;
+}
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+
+.nav-tabs-bottom > li > a:hover {
+  border-color: #ddd #eee #eee;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border-bottom-color: #FFF;
+  
+}
+
+.nav-tabs-bottom > li.active > a,
+.nav-tabs-bottom > li.active > a:hover,
+.nav-tabs-bottom > li.active > a:focus {
+  background-color: transparent;
+  border-top-color: #FFF;
+}
+
+/* Search box */
+.search-container
+{
+  background-color: #eaeaea; 
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  color: #f0f0f0 !important;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-user:before {
+content: "\e008";
+}
+
+.mobile-control-label {
+  margin-right: auto;
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: left;
+}
+
+.entrypostscript {
+  font-size: 8pt;
+  margin-left: 8px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+a, a:visited, .navlink a, .navlink a:visited, .list-group-item a {
+  color: rgb(57, 54, 54) !important;
+  font-size: 1.125rem !important;
+}
+
+/* Navigation links - cleaner and tighter spacing */
+.navmenu > ul > li > a,
+.navmenulower > ul > li > a,
+.navmenulower2 > ul > li > a,
+.navmenulower3 > ul > li > a {
+  display: block;
+  font-size: 16px !important;
+  padding: 6px 10px !important;       /* reduced padding */
+  color: #f0f0f0 !important;
+  text-decoration: none;
+}
+
+
+/* === Nav Menu Background and Link Color === */
+/* Top navigation bar background */
+.navtable {
+  background-color: #393636 !important;
+  padding: 10px 20px !important; /* top/bottom, left/right */
+  box-sizing: border-box;
+  border-bottom: none !important; /* optional */
+}
+
+/* Nav bar links/text */
+.navtable a {
+  color: #f0f0f0 !important; /* light text for contrast */
+  font-size: 16px !important; /* bigger font */
+  font-weight: 600; /* optional */
+  text-decoration: none; /* optional */
+}
+
+/* Nav bar hover or active state */
+.navtable a:hover {
+  color: #ffd700 !important; /* golden highlight on hover */
+}
+
+/* Body font size for content */
+body, p, span, div {
+  font-size: 16px !important;
+  line-height: 1.4;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Menu bar across the top of the page */
+.navtable
+{
+background-color:#393636; 
+color:#FFF;
+}
+.navlink {
+color:#ffd700;
+}
+.navlink > a {
+color: #ffd700;
+}
+.navlink > a:hover,
+.navlink > a:focus,
+.navlink:hover, 
+.navlink:focus {
+text-decoration: none;
+font-weight: bold;
+background-color: transparent;
+color:#FFF;
+}
+
+/* Menu that appears when you click on the menu icon */
+.navmenu > ul > li, .navmenu
+{
+background-color:#eee;
+}
+.navmenulower > ul > li
+{
+background-color:#FFF9F9;
+}
+.navmenulower2 > ul > li
+{
+background-color:#eaeaea;
+}
+.navmenulower3 > ul > li
+{
+background-color:#fff;
+}
+
+/* Hover effect */
+.navmenu > ul > li > a:hover,
+.navmenulower > ul > li > a:hover,
+.navmenulower2 > ul > li > a:hover,
+.navmenulower3 > ul > li > a:hover {
+  background-color: #505050 !important;
+  color: #ffd700 !important;
+}
+
+/* List group items - tighter spacing */
+.list-group-item {
+  padding: 8px 12px !important;       /* reduced from 16px 24px */
+  font-size: 16px !important;
+  color: #ffffff !important;
+  background-color: #393636 !important;
+}
+
+/* Remove bullets from menu lists */
+.navmenu ul,
+.navmenulower ul,
+.navmenulower2 ul,
+.navmenulower3 ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.navmenu > ul > li > a,
+.navmenulower > ul > li > a,
+.navmenulower2 > ul > li > a,
+.navmenulower3 > ul > li > a {
+  border-radius: 6px;
+  padding: 6px 12px;
+  max-width: 220px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navmenu,
+.navmenulower,
+.navmenulower2,
+.navmenulower3 {
+  max-width: 220px;
+}
+
+.list-group-item {
+  padding: 8px 12px !important;
+  font-size: 16px !important;
+  color: #ffffff !important;
+  background-color: #393636 !important;
+}
+.list-group-item {
+  padding: 14px 20px !important;
+  font-size: 1.125rem !important;
+}

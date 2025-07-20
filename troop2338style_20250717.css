@@ -1,0 +1,634 @@
+/* ============================== */
+/*          CSS VARIABLES          */
+/* ============================== */
+:root {
+  --font-xs: 1.25rem;
+  --font-sm: 1.5rem;
+  --font-md: 1.75rem;
+  --font-lg: 2rem;
+  --font-xl: 2.5rem;
+  --font-xxl: 3rem;
+  --font-title: 3.5rem;
+
+  --color-accent: #cc0000;
+  --color-dark: #393636;
+  --color-light: #eaeaea;
+  --color-light-hover: #ffffff;
+  --color-link: #cc0000;
+  --color-link-hover: #ffd700;
+}
+
+/* ============================== */
+/*          BASE RESETS            */
+/* ============================== */
+div:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input {
+  line-height: normal;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* ============================== */
+/*          GLOBAL STYLES          */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: var(--color-dark);
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+h2, h3 {
+  width: 100%;
+  text-align: center;
+  color: var(--color-accent);
+}
+
+h3 {
+  font-style: italic;
+  margin-top: 6px;
+  padding-top: 0;
+}
+
+.bodyheading {
+  font-size: var(--font-xl);
+}
+
+.bodysubheading {
+  display: block;
+  text-align: inherit;
+  width: 100%;
+}
+
+td.text-center .bodysubheading {
+  display: block;
+  text-align: center !important;
+  width: 100%;
+}
+
+.bodytext {
+  font-size: var(--font-md);
+}
+
+.alert-danger-heading {
+  padding: 4px;
+}
+
+.page-title {
+  font-size: var(--font-title) !important;
+  font-weight: bold;
+  text-align: center;
+  padding: 8pt 8pt !important;
+  margin: 0 auto 20px auto;
+  color: var(--color-accent);
+}
+
+/* ============================== */
+/*          LINK STYLES           */
+/* ============================== */
+a,
+a:visited,
+.widgetlink,
+.widgetlink:visited {
+  color: var(--color-light) !important;
+  text-decoration: none !important;
+}
+
+a:hover,
+a:focus,
+.widgetlink:hover,
+.widgetlink:focus {
+  color: var(--color-link-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* Force non-nav links to accent color */
+body a:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a):not(.sortable a):not(.table-striped a),
+body .widgetlink {
+  color: var(--color-link) !important;
+  text-decoration: none !important;
+}
+
+body a:hover:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a),
+body a:focus:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a),
+body .widgetlink:hover,
+body .widgetlink:focus {
+  color: var(--color-link-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* ============================== */
+/*          LINK STYLES           */
+/* ============================== */
+a,
+a:visited,
+.widgetlink,
+.widgetlink:visited {
+  color: var(--color-link) !important;
+  text-decoration: none !important;
+}
+
+a:hover,
+a:focus,
+.widgetlink:hover,
+.widgetlink:focus {
+  color: var(--color-link-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* Force non-nav links to accent color */
+body a:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a),
+body .widgetlink {
+  color: var(--color-link) !important;
+  text-decoration: none !important;
+}
+
+body a:hover:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a),
+body a:focus:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a),
+body .widgetlink:hover,
+body .widgetlink:focus {
+  color: var(--color-link-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* ============================== */
+/*          TABLE STYLES          */
+/* ============================== */
+
+.table-striped thead th {
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: hsla(0, 3%, 22%, 0.3) !important;
+}
+
+.table-striped th,
+.table-striped td {
+  padding: 8px 12px;
+  border: 1px solid #999;
+}
+
+/* Optional: override colhead class if needed */
+th.colhead {
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
+}
+
+/* Light header text and links in all styled tables */
+.table thead th,
+.table-striped thead th,
+.table-bordered thead th,
+.table-condensed thead th,
+.table-curved thead th,
+.sortable thead th {
+  color: var(--color-light) !important;
+  background-color: var(--color-dark) !important;
+}
+
+.table thead th a,
+.table-striped thead th a,
+.table-bordered thead th a,
+.table-condensed thead th a,
+.table-curved thead th a,
+.sortable thead th a {
+  color: var(--color-light) !important;
+  text-decoration: none !important;
+}
+
+.table thead th a:hover,
+.table-striped thead th a:hover,
+.table-bordered thead th a:hover,
+.table-condensed thead th a:hover,
+.table-curved thead th a:hover,
+.sortable thead th a:hover {
+  color: var(--color-light-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* Override links with sortheader class inside table headers */
+.table thead th a.sortheader,
+.table-striped thead th a.sortheader,
+.table-bordered thead th a.sortheader,
+.table-condensed thead th a.sortheader,
+.table-curved thead th a.sortheader,
+.sortable thead th a.sortheader {
+  color: var(--color-light) !important;
+  text-decoration: none !important;
+}
+
+.table thead th a.sortheader:hover,
+.table-striped thead th a.sortheader:hover,
+.table-bordered thead th a.sortheader:hover,
+.table-condensed thead th a.sortheader:hover,
+.table-curved thead th a.sortheader:hover,
+.sortable thead th a.sortheader:hover {
+  color: var(--color-link-hover) !important;
+  text-decoration: underline !important;
+}
+
+
+/* ============================== */
+/*         GLYPHICON FIX          */
+/* ============================== */
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================== */
+/*          NAVIGATION             */
+.navicon {
+  position: fixed;
+  top: 3px;
+  left: 3px;
+  z-index: 1030;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 6px;
+  margin: 0;
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  user-select: none;
+
+  white-space: nowrap;
+  text-align: center;
+
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  font-family: monospace;
+}
+
+.navtable {
+  background-color: var(--color-dark) !important;
+  box-sizing: border-box;
+  border-bottom: none !important;
+  color: var(--color-light);
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+}
+
+.navtable a {
+  color: var(--color-light) !important;
+  font-size: var(--font-sm) !important;
+  text-decoration: none;
+}
+
+.navtable a:hover {
+  color: var(--color-link-hover) !important;
+}
+
+.navrow {
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  height: 28px;
+  line-height: 28px;
+}
+
+.navrow a {
+  color: var(--color-light) !important;
+  text-decoration: none;
+  font-size: var(--font-sm);
+  line-height: 28px !important;
+  height: 28px !important;
+  display: inline-block !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  vertical-align: middle !important;
+}
+
+.navrow a:hover,
+.navrow a:focus {
+  color: var(--color-link-hover) !important;
+  font-size: var(--font-sm);
+}
+
+.navlink,
+.navlink > a {
+  color: var(--color-light);
+  font-size: var(--font-sm);
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.navlink > a {
+  display: inline-block;
+  padding: 2px 6px;
+  position: relative;
+  vertical-align: middle;
+  line-height: 28px;
+  height: 28px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navlink > a:hover,
+.navlink > a:focus,
+.navlink:hover,
+.navlink:focus {
+  color: var(--color-light) !important;
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+/* ============================== */
+/*        NAV MENU + TOOLS         */
+.navmenu {
+  min-width: 220px;
+  width: auto;
+  position: absolute;
+  top: 32px;
+  left: -500px;
+  transition: left 0.3s;
+  z-index: 99999;
+  white-space: normal;
+  border-radius: 12px;
+  padding: 2px 4px;
+  background-color: hsla(0, 3%, 22%, 0.3);
+}
+
+.navmenu > ul > li > a,
+.navmenulower > ul > li > a,
+.navmenulower2 > ul > li > a,
+.navmenulower3 > ul > li > a {
+  display: block;
+  font-size: var(--font-sm) !important;
+  padding: 2px 4px !important;
+  color: var(--color-light) !important;
+  text-decoration: none;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.navmenulower,
+.navmenulower2,
+.navmenulower3 {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  z-index: 99999;
+  background-color: hsla(0, 19%, 24%, 0.5);
+  border: 1px solid rgba(234, 234, 234, 0.4);
+  box-shadow: 0 0 8px rgba(234, 234, 234, 0.3);
+  border-radius: 12px;
+  overflow: visible;
+  width: auto;
+  min-width: 200px;
+  white-space: normal;
+}
+
+.navtools {
+  width: 240px;
+  position: fixed;
+  top: 32px;
+  right: -300px;
+  transition: right 0.3s;
+  z-index: 99;
+  padding: 4px;
+  box-sizing: border-box;
+  font-size: var(--font-sm);
+}
+
+.navtools a {
+  color: var(--color-light) !important;
+  text-decoration: none;
+  font-size: var(--font-sm);
+}
+
+.navtools a:hover,
+.navtools a:focus {
+  color: var(--color-light) !important;
+  text-decoration: underline;
+}
+
+/* ============================== */
+/*         MOBILE FRIENDLY        */
+
+@media (max-width: 600px) {
+  .container-flex {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navmenu {
+    position: fixed;
+    top: 30px;
+    left: -100%;
+    height: calc(100vh - 50px);
+    transition: left 0.3s ease-in-out;
+    background-color: hsla(0, 3%, 22%, 0.95);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0 8px 8px 0;
+    z-index: 9999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+    border: none !important;
+    padding: 6px; /* reduced from 10px */
+    box-sizing: border-box;
+  }
+
+  .navmenu.open {
+    left: 0 !important;
+  }
+
+  .navmenulower,
+  .navmenulower2,
+  .navmenulower3 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: hsla(0, 3%, 22%, 0.95) !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 2px !important;
+  }
+
+  .navmenulower > ul > li,
+  .navmenulower2 > ul > li,
+  .navmenulower3 > ul > li {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    margin: 2px !important;
+    padding: 4px 8px !important;
+  }
+
+  .navmenu *,
+  .navmenu ul,
+  .navmenu li,
+  .navmenu li a {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    margin: 2px !important;
+    padding: 0 !important;
+  }
+
+  .navmenu li a {
+    padding: 6px 8px !important;
+    display: block;
+    color: var(--color-light) !important;
+    text-decoration: none;
+    font-size: var(--font-xs) !important;
+  }
+
+  .navmenu li a:hover,
+  .navmenu li a:focus {
+    background-color: rgba(255, 215, 0, 0.15) !important;
+    color: var(--color-link-hover) !important;
+    text-decoration: underline;
+  }
+
+  .navtools {
+    width: 280px !important;
+    color: #f0f0f0 !important;
+    background-color: hsla(0, 3%, 22%, 0.9) !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+    border: none !important;
+    font-size: var(--font-xs) !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .navicon {
+    top: 0;
+    left: 0;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 6px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    font-size: 1.2rem !important;
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+
+  .navicon span:last-child {
+    font-size: 1rem !important;
+    line-height: 28px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: var(--color-light) !important;
+    user-select: none;
+  }
+  
+  .navrow {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .navtable {
+    overflow-x: hidden !important; /* prevent horizontal scroll */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .navtools a {
+    color: var(--color-link-hover) !important;
+  }
+
+  [class^="nav"]:not(.navicon),
+  [class^="nav"]:not(.navicon) * {
+    font-size: var(--font-xs) !important;
+    font-weight: normal !important;
+    padding: 1px 1px !important;
+    color: var(--color-light) !important;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  body {
+    font-size: 1.35rem;
+  }
+}
