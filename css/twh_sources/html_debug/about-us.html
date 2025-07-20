@@ -1,0 +1,1742 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="content-language" content="en-us">
+<title>Troop 2338 Georgetown</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Droid Sans:n,b,bi">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  <!--
+  body
+  {
+   font-family: 'Droid Sans', sans-serif;
+  }
+  -->
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.TroopWebHost.org/CSS/bootstrap_override_v11.css">
+<link rel="stylesheet" type="text/css" href="https://www.TroopWebHost.org/CSS/bootstrap_override_colors_USA.css">
+<link rel="stylesheet" type="text/css" href="https://troopwebhost.blob.core.windows.net/troop2338georgetown/troop2338style_202571713368676162011.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script language="JavaScript" src="soapclient.js">
+</script>
+<script type="text/javascript" src="sortableV2.js">
+</script>
+<script language="JavaScript" src="CalendarPopup.js">
+</script>
+<script language="JavaScript" src="easyJSfunctionsV14.js">
+</script>
+<script language="JavaScript" src="GetDeviceWidth.js">
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+  var cal = new CalendarPopup();
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.1">
+  <!-- Comment out script for old browers
+  var win2;
+  function ValuesChanged()
+  {
+    var ChangeFlag = false;
+    var easyform = document.getElementById('easyform');
+    for (i=0;i<easyform.length;i++)
+    {
+  	 var tempobj=easyform.elements[i];
+      try
+      {
+      if(tempobj.hasAttribute('name')){
+      if (tempobj.name.substring(0,5)=="ENTRY"||(tempobj.name.substring(0,2)=="CB"&&tempobj.name.indexOf("ROW")>=0))
+      {
+        var newval = "";
+        if (tempobj.name.substring(0,5)=="ENTRY")
+        {
+          var oldvalfieldname="OLD"+tempobj.name.substring(5,14);
+        }
+        else
+        {
+          var oldvalfieldname="OLD"+tempobj.name;
+        }
+        var oldval=easyform.elements[oldvalfieldname].value;
+        if (tempobj.type=="radio"||tempobj.type=="checkbox")
+        {
+          if (tempobj.checked)
+          {
+            newval=tempobj.value;
+          }
+          else
+          {
+            if (tempobj.type=="checkbox")
+            {
+              newval='N';
+            }
+            else
+            {
+              newval=oldval;
+            }
+          }
+          if (tempobj.type=="checkbox") 
+          { 
+            if (trim(oldval)=="") 
+            { 
+              oldval="N"; 
+            } 
+          } 
+        }
+        else
+        {
+          if (tempobj.type=="file")
+          {
+            if (trim(tempobj.value)=="")
+            {
+              newval=oldval;
+            }
+            else
+            {
+              newval=tempobj.value;
+            }
+          }
+          else
+          {
+            newval = tempobj.value;
+            newval = newval.replace(/&nbsp;/gi,' ');
+            oldval = oldval.replace(/&nbsp;/gi,' ');
+            newval = newval.replace(/&#34;/gi,'"');
+            oldval = oldval.replace(/&#34;/gi,'"');
+            newval = newval.replace(/&quot;/gi,'"');
+            oldval = oldval.replace(/&quot;/gi,'"');
+          }
+        }
+        if (newval!= oldval)
+  	   {
+  	     if (parseFloat(newval)==0)
+  	     {
+  	       newval='';
+  	     }
+  	     if (parseFloat(oldval)==0)
+  	     {
+  	       oldval='';
+  	     }
+        if (newval!= oldval)
+  	     {
+  	     ChangeFlag = true;
+  	     }
+  	   }
+      }
+      }
+    }
+    catch(err)
+    {
+    }
+    }
+    if (ChangeFlag)
+    {
+      if (confirm('You have not saved your work.  If you continue, this information will be lost.  Click OK to continue'))
+      {
+        ChangeFlag = false;
+      }
+    }
+    return ChangeFlag;
+  }
+  function LinkTo(targetURL,targetWindow)
+  {
+    try
+    {
+      if (ValuesChanged())
+      {
+  	  return false;
+      }
+    }
+    catch(err)
+    {
+    }
+      if (targetURL=="language"||targetURL=="format"||targetURL=="reportoption")
+      {
+         document.body.style.cursor = 'wait';
+    	    easyform.Selected_Action.value=targetURL;
+     	easyform.submit();
+         return true;
+      }
+      else
+      {
+        if (targetWindow=='FormReportMultiSectionaspxWindow'||targetWindow=='FormReportaspxWindow')
+        {
+          var pop = document.getElementById('ModalReportPop');
+    	     var popup = document.getElementById('ModalReport');
+     	 pop.innerHTML = '<a href="' + targetURL + '&ReportFormat=PDF" target="_blank">Print (Export to PDF)</a><br><br><a href="' + targetURL + '&ReportFormat=XLS" target="_blank">Open in Excel</a>';
+          $("#ModalReport").modal("show");
+        }
+        else
+        {
+          if (targetWindow=='')
+          {
+           document.body.style.cursor = 'wait';
+  	       window.location=targetURL;
+            return true;
+          }
+          else
+          {
+            document.body.style.cursor = 'wait';
+            var win2 = window.open(targetURL,targetWindow);
+            return true;
+          }
+        }
+      }
+  }
+  function CloseErrorBox()
+  {
+    if (win2!= undefined)
+    {
+      if (win2!= null)
+      {
+        win2.close();
+      }
+    }
+  }
+  function TestRegExp(thisfield,regex,errormsg)
+  {
+    var goodcolor = "#FFFFFF";
+    var errorcolor = "#FFAAAA";
+    var Hover_Action = document.getElementById('Hover_Action');
+    var hoveraction = Hover_Action.value;
+    var testvalue = trim(easyGetFieldValue(thisfield.name));
+      if ((thisfield.type == "select-one")&&(testvalue=="0"))
+      {
+        var Index = document.getElementById(thisfield.name).selectedIndex;
+  	  if(Index==0)
+  	  {
+  		if(trim(document.getElementById(thisfield.name).options[Index].text)=="")
+  		{
+  		  testvalue = "";
+  		}
+  	  }
+      }
+      if (thisfield.title==errormsg) thisfield.title="";
+      thisfield.style.backgroundColor=goodcolor;
+      if ((testvalue.length==0)||(testvalue.match(/^\ +$/)))
+      {
+        var fieldname = thisfield.name;
+        if(fieldname.substr(0,5)=='ENTRY'||fieldname.substr(0,4)=='DATE'||fieldname.substr(0,4)=='TIME'||fieldname.substr(0,4)=='AMPM')
+        {
+          var requiredflag;
+          if(fieldname.substr(0,5)=='ENTRY')
+          {
+            requiredflag = document.getElementById('RVAL'+thisfield.name);
+          }
+          else
+          {
+            requiredflag = document.getElementById('RVALENTRY'+thisfield.name.substring(4));
+          }
+          if (requiredflag.value=='Y'&&hoveraction!='cancel')
+          {
+               thisfield.style.backgroundColor=errorcolor;
+          }
+          else
+          {
+            return true;
+          }
+        }
+        else
+        {
+          return true;
+        }
+      }
+      else
+      {
+        var scriptpattern = new RegExp('< *(?:javascript|script)[^\n\r>]*>');
+        if (scriptpattern.test(testvalue.toLowerCase()))
+        {
+          thisfield.style.backgroundColor=errorcolor;
+          thisfield.title='Illegal input detected';
+          return false;
+        }
+        if (regex.length!=0)
+        {
+          var objRegExp = new RegExp(regex);
+          if (objRegExp.test(thisfield.value))
+    	     {
+            return true;
+    	     }
+          else
+          {
+            thisfield.style.backgroundColor=errorcolor;
+            thisfield.title=errormsg;
+            return false;
+          }
+        }
+        else
+        {
+          return true;
+        }
+      }
+  }
+    function easyFieldExit(thisfield)
+    {
+      var undefined;
+      var onLoad = false;
+      if (thisfield.type==undefined)
+      {
+        onLoad = true;
+      }
+    }
+  //-->
+</script>
+</head>
+<body onunload="CloseErrorBox()"  onload="easySetFocus();GetDeviceWidth();" >
+<form  enctype="multipart/form-data" action="https://www.TroopWebHost.org/formCustom.aspx" target="_self" method="post" name="easyform" id="easyform">
+<script language="JavaScript" type="text/javascript"> 
+  <!--
+  function submitForm() {
+  	//change the following line to true to submit form
+  	return true;
+  }
+  //-->
+</script>
+<input type=hidden name="menuopenflag" id="menuopenflag" value="N">
+<input type=hidden name="Selected_Action" id="Selected_Action" value="">
+<input type=hidden name="Hover_Action" id="Hover_Action" value="">
+<input type=hidden name="Selected_Button_ID" id="Selected_Button_ID" value="">
+<input type=hidden name="Menu_Item_ID" id="Menu_Item_ID" value="61345">
+<input type=hidden name="Form_ID" id="Form_ID" value="7323">
+<input type=hidden name="Link_To_Menu_Item_ID" id="Link_To_Menu_Item_ID" value="">
+<input type=hidden name="Pass" id="Pass" value="1">
+<input type=hidden name="Stack" id="Stack" value="1">
+<input type=hidden name="NextSectionPageNumber" id="NextSectionPageNumber" value="">
+<input type=hidden name="NewRowsPerPage" id="NewRowsPerPage" value="">
+<input type=hidden name="ChildRowID" id="ChildRowID" value="0">
+<input type=hidden name="Report_Format" id="Report_Format" value="">
+<input type=hidden name="Current_URL" id="Current_URL" value="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Custom_Form_ID=2">
+<a href="javascript:togglemenu();">
+<div class="navicon" style="width:64px;">
+  <table>
+    <tr>
+      <td>
+        <span class="fa fa-bars" id="main-menu-icon" name="main-menu-icon"></span><span style="font-size:13px;font-family:arial,helvetica,sans-serif;vertical-align:middle;">&nbsp; menu</span>
+      </td>
+    </tr>
+  </table>
+</div>
+</a>
+<table class="navtable">
+  <tr class="navrow">
+    <td style="width:76px;">
+    </td>
+    <td style="padding:4px;">
+      <a href="#" class="navlink nav-home-link" onClick="LinkTo('Troop2338Georgetown/Index.htm','_top')">Troop 2338 Georgetown</a>
+    </td>
+    <td class="quickmenu1">
+      <table>
+        <tr>
+          <td class="navlink">
+            <a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45985&Stack=1','');">Site Appearance</a>
+          </td>
+          <td class="navlink">
+            <a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46067&Stack=1','');">Leadership Positions</a>
+          </td>
+          <td class="navlink">
+            <a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45890&Stack=0','');">All Active Members</a>
+          </td>
+          <td class="navlink">
+            <a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=56926&Stack=0','');">Advancement Hub</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="pull-right">
+      <table>
+        <tr>
+          <td class="navlink"><a href="javascript:logoff();"><span class="glyphicon glyphicon-user"></span> Log Off</a>
+          </td>
+          <td class="navlink"><a href="javascript:togglehelp();" style="font-size:1.5em;" id="help-menu-icon" name="help-menu-icon">?</a>
+          </td>
+          <td class="navlink"><a href="javascript:toggletools();"><span class="glyphicon glyphicon-cog" id="tools-menu-icon" name="tools-menu-icon"></span></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td style="width:12px;">
+    </td>
+  </tr>
+  <tr class="navrow quickmenu2">
+    <td colspan=5 align=center>
+      <table>
+        <tr>
+          <td class="navlink">
+            <a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45985&Stack=1','');">Site Appearance</a>
+          </td>
+          <td class="navlink">
+            <a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46067&Stack=1','');">Leadership Positions</a>
+          </td>
+          <td class="navlink">
+            <a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45890&Stack=0','');">All Active Members</a>
+          </td>
+          <td class="navlink">
+            <a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=56926&Stack=0','');">Advancement Hub</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div id="mainmenu" class="navmenu">
+  <ul class="list-group">
+  <li class="list-group-item"><a href="javascript:toggleLower('m2');">Home <span id="m2-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m2" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=61344&Stack=0&Custom_Form_ID=1','');">Home</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=61345&Stack=0&Custom_Form_ID=2','');">About Our Troop</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45869&Stack=1','');">Our Adult Leaders</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45872&Stack=1','');">Maintain Announcements</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=54264&Stack=0','');">Maintain Surveys</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=51141&Stack=0','');">Manage Custom Pages</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=53997&Stack=0','');">View Contacts</a></li>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m3');">My Stuff <span id="m3-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m3" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=57972&Stack=1','');">My Stuff Hub (Adult)</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=57973&Stack=1','');">My Stuff Hub (Scout)</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45899&Stack=1','');">My Scouts</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45903&Stack=1','');">My Personal Information</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=54773&Stack=0','');">My Skills and Interests</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45904&Stack=1','');">Change My Password</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m4');">My Money <span id="m4-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m4" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45900&Stack=0','');">My Account</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45907&Stack=0','');">Buy Stuff From Troop</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m5');">Sign Up <span id="m5-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m5" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45905&Stack=1','');">Sign-Up For Events</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45906&Stack=0','');">Sign-Up For Shifts</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45908&Stack=1','');">Subscribe to Calendar</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=54267&Stack=0','');">Surveys</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m6');">Forums <span id="m6-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m6" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45909&Stack=1','');">Scout Forum</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45910&Stack=1','');">My Forum Posts</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45915&Stack=1','');">My Library Materials</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45916&Stack=1','');">My Troop Equipment</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45919&Stack=1','');">My Training History</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45920&Stack=1','');">My Merit Badge Assignments</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=51345&Stack=0','');">Approve Requests To Sign Off On Merit Badge Requirements</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45921&Stack=1','');">My Awards (Adult)</a></li>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m7');">Resources <span id="m7-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m7" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('bsaShowTroopForms.aspx?Menu_Item_ID=45870&Stack=1','');">Forms & Documents</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45871&Stack=1','');">Resource Links</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45892&Stack=1','');">Maintain Forms & Documents</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45893&Stack=1','');">Maintain Form Categories</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45873&Stack=1','');">Maintain Resource Links</a></li>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m8');">Calendar <span id="m8-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m8" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=56931&Stack=0','');">Events Hub</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45922&Stack=1','');">Calendar</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m9');">Sign Up Members <span id="m9-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m9" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45926&Stack=0','');">Sign Up Members For Event</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45927&Stack=0','');">Sign Up Members For Shifts</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m10');">Take Attendance <span id="m10-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m10" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45928&Stack=0','');">Take Attendance</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45929&Stack=0','');">Take Attendance For My Patrol</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45930&Stack=0','');">Take Attendance For Shifts</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45925&Stack=1','');">Event Documents</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45931&Stack=0','');">Maintain Events</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormRunProcedure.aspx?Menu_Item_ID=45934&Stack=0','');">Copy An Event</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51596&Stack=0','');">Copy Monthly Event</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=56557&Stack=0','');">National Holidays</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45932&Stack=1','');">Maintain Event Locations</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormRunProcedure.aspx?Menu_Item_ID=56179&Stack=1','');">Merge Duplicate Locations</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m11');">Event Reports <span id="m11-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m11" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m12');">Upcoming Events Details <span id="m12-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m12" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46093&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46093&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m13');">Upcoming Events Summary <span id="m13-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m13" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51898&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51898&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m14');">Planned Participation In Future Events <span id="m14-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m14" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59976&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59976&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m15');">Event Compliance <span id="m15-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m15" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59151&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59151&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m16');">Shift Compliance <span id="m16-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m16" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59836&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59836&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m17');">Permission Needed By Event <span id="m17-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m17" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57568&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57568&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m18');">Permission Needed By Scout <span id="m18-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m18" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57569&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57569&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46094&Stack=1','');">Event Participation Percentage By Event Type</a></li>
+      <li class="list-group-item"><a href="javascript:toggleLower('m19');">Event Participation Annual Summary <span id="m19-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m19" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46095&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46095&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m20');">Event Participation Cumulative Summary <span id="m20-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m20" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46096&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46096&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46097&Stack=1','');">Event Participation Summary for Date Range</a></li>
+      <li class="list-group-item"><a href="javascript:toggleLower('m21');">Most Recent Event Participation By Scout <span id="m21-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m21" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55472&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55472&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46098&Stack=0','');">Attendance Totals By Event</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=52978&Stack=0','');">Community Service Reports</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=53104&Stack=1&ReportFormat=XLS','');">Export Events To Excel</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45935&Stack=1&ReportFormat=XLS','');">Export Event Participation To Excel</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m22');">Upload Events <span id="m22-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m22" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScoutbookEventsCSV.aspx?Menu_Item_ID=59739&Stack=0','');">Upload Scoutbook Events</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadSOARevents.aspx?Menu_Item_ID=58625&Stack=0','');">Upload SOAR Events</a></li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m23');">Photo Gallery <span id="m23-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m23" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45936&Stack=1','');">Photo Gallery</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45937&Stack=1','');">Video Gallery</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45939&Stack=0','');">Upload & Maintain Photos</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45933&Stack=1','');">Search Photos</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45938&Stack=0','');">Delete Photos</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=55647&Stack=0','');">Download Photos</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45940&Stack=0','');">Maintain Video Links</a></li>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m24');">E-Mail <span id="m24-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m24" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=53546&Stack=0','');">Quick Text Message</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45961&Stack=1','');">Send E-Mail</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51051&Stack=0','');">Send E-Mail To Group</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45966&Stack=0','');">Maintain E-Mail Groups</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45962&Stack=1','');">My Inbox</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45963&Stack=1','');">My Sent Messages</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45965&Stack=1','');">View All E-Mail</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51034&Stack=0','');">My E-Mail Delivery Status</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51035&Stack=0','');">Blocked E-Mail Addresses</a></li>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m25');">Membership <span id="m25-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m25" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=56934&Stack=0','');">Membership Hub</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=52699&Stack=0','');">Quick Dial</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m26');">View / Maintain Members <span id="m26-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m26" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaNewScout.aspx?Menu_Item_ID=45874&Stack=0','');">New Scout Registration</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45882&Stack=0','');">Active Scouts</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45883&Stack=0','');">Active Adults</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45890&Stack=0','');">All Active Members</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45891&Stack=0','');">Inactive Members</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormRunProcedure.aspx?Menu_Item_ID=51171&Stack=0','');">Merge Duplicate Members</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m27');">Update All <span id="m27-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m27" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46075&Stack=1','');">Scout Patrol Assignments</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46077&Stack=1','');">Scout Swim Test</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46078&Stack=0','');">Scout Medical Form Dates</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=55454&Stack=0','');">Scout Affirmation Date</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46079&Stack=0','');">Scout BSA ID</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=53678&Stack=0','');">Scout Shirt Sizes</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormRunProcedure.aspx?Menu_Item_ID=45896&Stack=1','');">Advance Scout Grade Level</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46080&Stack=0','');">Adult Medical Form Dates</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46082&Stack=1','');">Adult Leader Medical Form Dates</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=55739&Stack=0','');">All Members Medical Form Dates</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46081&Stack=0','');">Adult BSA ID</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46083&Stack=1','');">Adult Leader Swim Test</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=51098&Stack=0','');">All Adults Swim Test</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=53679&Stack=0','');">All Adults Shirt Sizes</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46084&Stack=0','');">Inactive Alumni</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m28');">Upload Members <span id="m28-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m28" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScoutScoutBook.aspx?Menu_Item_ID=51802&Stack=0','');">Upload Scouts From ScoutBook</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadAdultsScoutBook.aspx?Menu_Item_ID=51808&Stack=0','');">Upload Adults From ScoutBook</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadMyScoutingRoster.aspx?Menu_Item_ID=59276&Stack=0','');">Upload Roster From My.Scouting</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadTroopTrackUser.aspx?Menu_Item_ID=58052&Stack=0','');">Upload Users From TroopTrack</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadTroopTrackMemberDetails.aspx?Menu_Item_ID=58065&Stack=0','');">Upload Member Details From TroopTrack</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadSOARmembers.aspx?Menu_Item_ID=58153&Stack=0','');">Upload SOAR Members</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadSOARfamily.aspx?Menu_Item_ID=58303&Stack=0','');">Upload SOAR Family</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadTroopmasterWebPersonalData.aspx?Menu_Item_ID=52412&Stack=0','');">Upload Members From TM Web 2.0</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScouts.aspx?Menu_Item_ID=45978&Stack=0','');">Upload Scouts From Troopmaster</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadAdults.aspx?Menu_Item_ID=45979&Stack=0','');">Upload Adult Leaders From TroopMaster</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScoutsScoutTrack2.aspx?Menu_Item_ID=45989&Stack=0','');">Upload Scouts from ScoutTrack</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadAdultsScoutTrack2.aspx?Menu_Item_ID=45990&Stack=1','');">Upload Adults From ScoutTrack</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScoutNetRoster.aspx?Menu_Item_ID=45991&Stack=1','');">Upload Members From ScoutNet</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=53029&Stack=0','');">Transfer Scouts</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m29');">Patrols, Crews & Ships <span id="m29-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m29" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45877&Stack=0','');">Patrols</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45878&Stack=0','');">View Patrol Rosters</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45881&Stack=0','');">Dynamic Subgroups</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=54774&Stack=0','');">Skills and Interests</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m30');">Leadership <span id="m30-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m30" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45885&Stack=1','');">Scout Leadership</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45886&Stack=0','');">Adult Leadership</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m31');">Training <span id="m31-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m31" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45887&Stack=0','');">Scout Training</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45888&Stack=0','');">Adult Training</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadTrainingUniversal.aspx?Menu_Item_ID=55810&Stack=0','');">Upload Training from My.Scouting.Org</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadAdultTrainingTM.aspx?Menu_Item_ID=51207&Stack=0','');">Upload Adult Training From TroopMaster</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=53785&Stack=0','');">Recharter Years</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m32');">Troop Directories <span id="m32-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m32" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m33');">Scout Directory <span id="m33-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m33" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46012&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46012&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m34');">Scout Directory - Names Only <span id="m34-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m34" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51241&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51241&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m35');">Scout Directory - Names Only, By Patrol <span id="m35-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m35" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52344&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52344&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m36');">Scout Leader Directory <span id="m36-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m36" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=50808&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=50808&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m37');">Adult Directory <span id="m37-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m37" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46013&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46013&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m38');">Adult Directory - Names Only <span id="m38-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m38" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=56055&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=56055&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m39');">Adult Leader Directory <span id="m39-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m39" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46014&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46014&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m40');">Adult Leaders By Position <span id="m40-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m40" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=54040&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=54040&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m41');">Adult Involvement <span id="m41-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m41" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57107&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57107&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m42');">Troop Contact List <span id="m42-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m42" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46015&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46015&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m43');">Emergency Contact List <span id="m43-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m43" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46016&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46016&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m44');">Patrol Roster <span id="m44-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m44" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46017&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46017&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m45');">Patrol Roster w/Contact Info <span id="m45-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m45" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46018&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46018&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m46');">Merit Badge Counselors By Name <span id="m46-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m46" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52029&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52029&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m47');">Merit Badge Counselors By Badge <span id="m47-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m47" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52030&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52030&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m48');">Swim Test Results <span id="m48-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m48" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46020&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46020&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m49');">Members with Allergies or Dietary Restrictions <span id="m49-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m49" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55386&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55386&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m50');">Scout Parent Cross Reference <span id="m50-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m50" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46030&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46030&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m51');">Scout Parent Cross Reference With Contact Info <span id="m51-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m51" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52053&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52053&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m52');">Parent Scout Cross Reference <span id="m52-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m52" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52055&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52055&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m53');">Birthday List - Scouts <span id="m53-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m53" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46031&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46031&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m54');">Birthday List - Adults <span id="m54-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m54" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46032&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46032&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m55');">Scouts By Age <span id="m55-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m55" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52054&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52054&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m56');">Shirt Sizes <span id="m56-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m56" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=52746&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=52746&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m57');">Scout Last Affirmation Dates <span id="m57-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m57" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57589&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=57589&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m58');">Upcoming BSA Registration Renewals <span id="m58-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m58" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59261&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59261&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m59');">BSA Registrations <span id="m59-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m59" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59262&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59262&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m60');">Medical Form Reports <span id="m60-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m60" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m61');">Medical Form Submission Dates - All Scouts <span id="m61-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m61" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46021&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46021&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m62');">Medical Form Submission Dates - All Adults <span id="m62-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m62" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46022&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46022&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m63');">Medical Form Expiration Dates - All Scouts <span id="m63-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m63" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46023&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46023&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m64');">Medical Form Expiration Dates - All Adults <span id="m64-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m64" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46024&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46024&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m65');">Expired Medical Forms <span id="m65-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m65" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=61096&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=61096&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m66');">Training Reports <span id="m66-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m66" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m67');">Adult Leaders Who Need YPT <span id="m67-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m67" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46025&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46025&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m68');">Expired Training By Course <span id="m68-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m68" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46026&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46026&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m69');">Expired Training By Person <span id="m69-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m69" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46027&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46027&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m70');">Required Training By Course <span id="m70-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m70" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46028&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46028&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m71');">Required Training By Person <span id="m71-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m71" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46029&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46029&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=60286&Stack=0','');">NYLT Eligibility Report</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m72');">Export Membership Data <span id="m72-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m72" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45897&Stack=1&ReportFormat=XLS','');">Export Roster to Excel</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=53747&Stack=1&ReportFormat=XLS','');">Export Active Roster To Excel</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45898&Stack=1','');">Export Roster to Troop Awards</a></li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m73');">Advancement <span id="m73-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m73" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=56926&Stack=0','');">Advancement Hub</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m74');">Maintain Advancement <span id="m74-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m74" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45941&Stack=0','');">Individual Advancement</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45956&Stack=0','');">Enter Completed Ranks w/o Requirements</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45950&Stack=0','');">Enter Requirements Earned At Event</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUpdateGroupRankRequirements.aspx?Menu_Item_ID=51182&Stack=0','');">Enter Rank Requirements For A Group</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51174&Stack=0','');">Enter Merit Badge Requirements For A Group</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=51331&Stack=0','');">Approve Requests To Sign Off On Merit Badge Requirements</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=51369&Stack=0','');">Approve Requests To Sign Off On Rank Requirements</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45945&Stack=0','');">Merit Badges</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45946&Stack=0','');">Special Awards - Scouts</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45947&Stack=0','');">Special Awards - Adults</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45949&Stack=0','');">Generate Service Stars</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45951&Stack=0','');">Credit For Other Activity</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51192&Stack=1&ReportFormat=XLS','');">Export Rank Requirements Earned To Excel</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55384&Stack=1&ReportFormat=XLS','');">Export Rank Requirement Status To Excel</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m75');">Upload Advancement <span id="m75-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m75" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScoutBookAdvancement.aspx?Menu_Item_ID=51820&Stack=0','');">Upload ScoutBook Advancement</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadScoutBookParticipationHisotry.aspx?Menu_Item_ID=51822&Stack=0','');">Upload ScoutBook Participation History</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadOtherActivityFromInternetAdvancement2.aspx?Menu_Item_ID=56928&Stack=0','');">Upload Activity Log From Internet Advancement</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadOtherActivity.aspx?Menu_Item_ID=56929&Stack=0','');">Upload Other Activity From CSV</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45957&Stack=0','');">View Advancement</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45948&Stack=0','');">Adult Achievements</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45955&Stack=1','');">Merit Badge Counselors</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m76');">Recognize Recent Achievements <span id="m76-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m76" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45952&Stack=0','');">Pending Awards</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45953&Stack=0','');">Set Award Date</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45954&Stack=1','');">Export Troop Awards Advancement Files</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=53074&Stack=0','');">Export to Scoutbook Plus</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m77');">Requirement Reports <span id="m77-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m77" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m78');">Scout Requirements By Scout <span id="m78-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m78" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=51227&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=51227&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m79');">Tenderfoot Requirements By Scout <span id="m79-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m79" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46034&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46034&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m80');">Second Class Requirements By Scout <span id="m80-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m80" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46035&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46035&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m81');">First Class Requirements By Scout <span id="m81-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m81" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46036&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46036&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m82');">Outdoor Requirements Thru First Class By Scout <span id="m82-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m82" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46037&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46037&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m83');">Eagle Rank Requirements By Scout <span id="m83-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m83" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46038&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46038&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m84');">Eagle Merit Badge Status By Scout <span id="m84-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m84" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46039&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46039&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m85');">Eagle Outdoor Merit Badge Status By Scout <span id="m85-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m85" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46040&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46040&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m86');">Leadership Rank Requirement Status <span id="m86-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m86" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46041&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46041&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m87');">Uncompleted Rank Requirements By Scout <span id="m87-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m87" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46046&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46046&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m88');">Uncompleted Rank Requirements By Requirement <span id="m88-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m88" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46047&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46047&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m89');">Uncompleted Merit Badge Requirements By Scout <span id="m89-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m89" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46048&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46048&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m90');">Uncompleted Merit Badge Requirements By Requirement <span id="m90-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m90" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46049&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46049&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m91');">Camping Merit Badge Camping Nights <span id="m91-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m91" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46050&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46050&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m92');">Advancement Status Reports <span id="m92-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m92" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m93');">Scouts Ready For SM Conference or Board Of Review <span id="m93-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m93" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46033&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46033&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m94');">Rank Status by Age of Scout <span id="m94-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m94" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46042&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46042&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m95');">Rank Status by Date of Current Rank <span id="m95-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m95" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46043&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46043&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m96');">Rank Advancement History By Scout <span id="m96-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m96" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46044&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46044&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m97');">Merit Badge Counts By Scout <span id="m97-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m97" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=56428&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=56428&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m98');">Merit Badge History By Scout By Date Earned <span id="m98-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m98" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46045&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46045&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m99');">Merit Badge History By Scout By Badge Name <span id="m99-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m99" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52388&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52388&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m100');">Merit Badges In Progress By Scout <span id="m100-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m100" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52217&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52217&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m101');">Merit Badges In Progress By Badge <span id="m101-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m101" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52218&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52218&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m102');">Merit Badges In Progress By Counselor <span id="m102-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m102" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55502&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55502&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m103');">Sign Off Requests <span id="m103-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m103" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55741&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=55741&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m104');">Eagle Roll Call <span id="m104-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m104" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46057&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46057&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m105');">National Outdoor Awards Reports <span id="m105-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m105" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m106');">Camping Segment <span id="m106-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m106" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51740&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51740&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m107');">Hiking Segment <span id="m107-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m107" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51741&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51741&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m108');">Aquatics Segment <span id="m108-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m108" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51742&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51742&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m109');">Conservation Segment <span id="m109-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m109" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51743&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51743&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m110');">Riding Segment <span id="m110-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m110" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51744&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51744&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m111');">Adventure Segment <span id="m111-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m111" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51745&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51745&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m112');">World Conservation Award Report <span id="m112-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m112" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51771&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=51771&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m113');">Advancement Reports by Patrol <span id="m113-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m113" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m114');">Rank Status By Patrol <span id="m114-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m114" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46085&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46085&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m115');">Tenderfoot Requirements By Patrol <span id="m115-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m115" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46086&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46086&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m116');">Second Class Requirements By Patrol <span id="m116-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m116" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46087&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46087&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m117');">First Class Requirements By Patrol <span id="m117-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m117" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46088&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46088&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m118');">First Class Outdoor Requirements By Patrol <span id="m118-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m118" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46089&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46089&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m119');">Eagle Rank Requirements By Patrol <span id="m119-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m119" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46090&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46090&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m120');">Eagle Merit Badge Status By Patrol <span id="m120-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m120" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46091&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46091&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m121');">Order of the Arrow Reports <span id="m121-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m121" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=53654&Stack=0','');">Order of the Arrow Eligibility</a></li>
+      <li class="list-group-item"><a href="javascript:toggleLower('m122');">Order of the Arrow Roster <span id="m122-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m122" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=53249&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=53249&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m123');">Order of the Arrow Advancement Dates <span id="m123-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m123" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46053&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46053&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m124');">Money <span id="m124-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m124" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('formCustom.aspx?Menu_Item_ID=56896&Stack=0','');">Financial Hub</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45995&Stack=0','');">Individual Transactions</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45998&Stack=0','');">Group Transactions</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('PaymentCollector.aspx?Menu_Item_ID=55359&Stack=0','PaymentCollector');">Payment Collector</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=52787&Stack=0','');">Expense Reimbursement Requests</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('bsaUploadAccounts.aspx?Menu_Item_ID=45983&Stack=0','');">Upload Account Balances From TroopLedger</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m125');">Account Balances <span id="m125-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m125" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46000&Stack=0','');">Individual Accounts</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=54904&Stack=0','');">Personal Subaccount Balances</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46003&Stack=1','');">Email Account Balances</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45999&Stack=0','');">Troop Accounts</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46001&Stack=1','');">Event Balances</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46063&Stack=0','');">Funds</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46002&Stack=1','');">Statement Reconciliation</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46004&Stack=1&ReportFormat=XLS','');">Export All Transactions to Excel</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m126');">Manage On-Line Payments <span id="m126-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m126" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46005&Stack=0','');">PayPal Configuration</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=55010&Stack=0','');">Square Configuration</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46006&Stack=0','');">On-Line Payment History</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=52245&Stack=0','');">Fiscal Years & Budgets</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m127');">Financial Reports <span id="m127-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m127" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m128');">Report Account Balances <span id="m128-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m128" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46058&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=46058&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46059&Stack=1','');">Report Financial History</a></li>
+      <li class="list-group-item"><a href="javascript:toggleLower('m129');">Scout Account Balances <span id="m129-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m129" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52178&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52178&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m130');">Scout Account Balances By Gender <span id="m130-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m130" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59943&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=59943&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51899&Stack=0','');">Individual Accounts Summary</a></li>
+      <li class="list-group-item"><a href="javascript:toggleLower('m131');">Fund Balances Report <span id="m131-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m131" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46060&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46060&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m132');">Fund Balances By Fiscal Year <span id="m132-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m132" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46061&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46061&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=51940&Stack=0','');">Fund Balances on Effective Date</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=56819&Stack=0','');">Recent Deposits To Member Accounts</a></li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m133');">Inventory <span id="m133-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m133" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46007&Stack=0','');">Maintain Troop Inventory</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46008&Stack=1','');">Library Check-in / Check-out</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46009&Stack=0','');">Equipment Check-in / Check-out</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46010&Stack=1','');">Quick Library Check-In</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=46011&Stack=1','');">Quick Equipment Check-In</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m134');">Inventory Report - All Items <span id="m134-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m134" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52370&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52370&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m135');">Inventory Report - Checked Out Items <span id="m135-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m135" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52371&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=52371&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m136');">Site Configuration <span id="m136-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m136" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45894&Stack=0','');">Troop Information</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45977&Stack=1','');">Automated Newsletter</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45967&Stack=0','');">E-Mail Settings</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=52192&Stack=0','');">Electronic Permission Form</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45960&Stack=0','');">Advancement Settings</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46067&Stack=1','');">Leadership Positions</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46068&Stack=1','');">Training Courses</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=52697&Stack=0','');">Shirt Sizes</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=53873&Stack=0','');">Dress Codes</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=54775&Stack=0','');">Skills and Interests</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46092&Stack=1','');">Special Awards</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46065&Stack=1','');">Event Types</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46066&Stack=1','');">Activity Types</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=56722&Stack=0','');">Inventory Categories</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=56723&Stack=0','');">Inventory Locations</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m137');">Sales <span id="m137-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m137" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46112&Stack=0','');">Payment Types</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46113&Stack=0','');">Inventory Transaction Types</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m138');">Money <span id="m138-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m138" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46062&Stack=0','');">Transaction Types</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=52071&Stack=0','');">Personal Subaccounts</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=54903&Stack=0','');">Personal Subaccount Transfer Rules</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46064&Stack=0','');">Fund Categories</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=52244&Stack=0','');">Budget Template</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=52783&Stack=0','');">Expense Reimbursements</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=55360&Stack=0','');">Payment Collector</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=53996&Stack=0','');">Contact Us Reasons</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45985&Stack=1','');">Site Appearance</a></li>
+    </ul>
+  </div>
+  <li class="list-group-item"><a href="javascript:toggleLower('m139');">Administration <span id="m139-icon" class="fa fa-caret-right pull-right"></span></a></li>
+  <div id="m139" class="navmenulower">
+    <ul class="list-group">
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45969&Stack=1','');">Users & Passwords</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45970&Stack=1','');">Assign User Roles</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=45971&Stack=0','');">Send User IDs & Passwords</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=59969&Stack=0','');">Automatically Send New User IDs</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=45972&Stack=0','');">View User Permissions</a></li>
+    <li class="list-group-item"><a href="javascript:toggleLower('m140');">Menu Configuration <span id="m140-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m140" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=50604&Stack=0','');">Configure Quick Menus</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=50482&Stack=0','');">Override Default Public Access Settings</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=50481&Stack=0','');">Disable Menu Items</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m141');">Security Configuration <span id="m141-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m141" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46069&Stack=1','');">Configure User Roles</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46070&Stack=1','');">Assign Tasks To Roles</a></li>
+      <li class="list-group-item"><a href="javascript:LinkTo('FormList.aspx?Menu_Item_ID=46071&Stack=1','');">Set Default User Role</a></li>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:toggleLower('m142');">Security Reports <span id="m142-icon" class="fa fa-caret-right pull-right"></span></a></li>
+    <div id="m142" class="navmenulower2">
+      <ul class="list-group">
+      <li class="list-group-item"><a href="javascript:toggleLower('m143');">User Permissions Report <span id="m143-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m143" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45973&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45973&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m144');">Menu Security Report <span id="m144-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m144" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45974&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45974&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m145');">User Role Menu Report <span id="m145-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m145" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45975&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=45975&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m146');">Role Task Report <span id="m146-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m146" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46072&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46072&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m147');">Task Role Report <span id="m147-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m147" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46073&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46073&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m148');">Task Menu Items Report <span id="m148-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m148" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46074&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReport.aspx?Menu_Item_ID=46074&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      <li class="list-group-item"><a href="javascript:toggleLower('m149');">User Activity Report <span id="m149-icon" class="fa fa-caret-right pull-right"></span></a></li>
+      <div id="m149" class="navmenulower3">
+        <ul class="list-group">
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=53188&Stack=1&ReportFormat=PDF','');">Print (Export to PDF)</a></li>
+        <li class="list-group-item"><a href="javascript:LinkTo('FormReportMultiSection.aspx?Menu_Item_ID=53188&Stack=1&ReportFormat=XLS','');">Open in Excel</a></li>
+        </ul>
+      </div>
+      </ul>
+    </div>
+    <li class="list-group-item"><a href="javascript:LinkTo('BackupUserDatabase.aspx?Menu_Item_ID=45984&Stack=1','');">Database Backup</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('PayPalRenewalFee.aspx?Menu_Item_ID=45988&Stack=1','');">Renew Subscription To TroopWebHost</a></li>
+    <li class="list-group-item"><a href="javascript:LinkTo('FormDetail.aspx?Menu_Item_ID=53734&Stack=0','');">TroopWebHost Administrative Contacts</a></li>
+    </ul>
+  </div>
+  </ul>
+</div>
+<div class="modal fade" id="ModalPageFormat" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <a style="float:right;margin-right:30px;" href="help.aspx?ID=308" target="_blank">
+        <span class="glyphicon glyphicon-question-sign help-icon"></span>
+        </a>
+        Format this site for...
+        <br><br>
+        <div class="form-group">
+          <input type=radio  name="Page_Layout" id="Page_Layout_1" value="1" tabindex=1 value="on"  checked> &nbsp;
+          Laptop / Desktop Computer
+        </div>
+        <div class="form-group">
+          <input type=radio  name="Page_Layout" id="Page_Layout_2" value="2" tabindex=2 value="on" > &nbsp;
+          Smart Phone / Mobile Device
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input class="btn btn-success" style="float: left;" tabindex=3 type=button value="OK" name="Page_Layout_Button" id="Page_Layout_Button" onClick="LinkTo('format','');" >
+        <button type="button" class="btn btn-danger" style="float: right;" tabindex=4 data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="toolsmenu" class="navtools">
+  <ul class="list-group">
+  <li class="list-group-item"><a href="#"  onclick="easyEditHTMLPage();">Edit This Page</a></li>
+  <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#ModalPageFormat">Format</a></li>
+  <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#ModalReportingOptions">Reporting Options</a></li>
+  <li class="list-group-item"><a href="FormDetail.aspx?Form_ID=258&Stack=0&Menu_Item_ID=61345">Change My Password</a></li>
+  <li class="list-group-item"><a href="FormDetail.aspx?Form_ID=6837&Stack=0&Menu_Item_ID=61345">Configure My Quick Menu</a></li>
+  <li class="list-group-item"><a href="FormDetail.aspx?Form_ID=5184&Stack=0&Menu_Item_ID=61345">Bookmark This Site</a></li>
+  </ul>
+</div>
+<div id="helpmenu" class="navtools">
+  <ul class="list-group">
+  <li class="list-group-item"><a href="Help.aspx?DB=2" target="_blank">User Guide</a></li>
+  <li class="list-group-item"><a href="https://www.youtube.com/playlist?list=PL4bC-UY63jygEqBauW0Ofz9FJBWsPkphf" target="_blank">Mobile App Tutorials</a></li>
+  <li class="list-group-item"><a href="FormList.aspx?Form_ID=8220&Stack=0&Menu_Item_ID=61345">TroopWebHost User Forum</a></li>
+  <li class="list-group-item"><a href="FormList.aspx?Form_ID=8266&Stack=0&Menu_Item_ID=61345">Enhancement Requests</a></li>
+  <li class="list-group-item"><a href="FormList.aspx?Form_ID=8261&Stack=0&Menu_Item_ID=61345">My Support Tickets</a></li>
+  <li class="list-group-item"><a href="FormList.aspx?Form_ID=8263&Stack=0&Menu_Item_ID=61345">My Unit's Support Tickets</a></li>
+  <li class="list-group-item"><a href="https://www.TroopWebHost.com/newsletter.htm" target="_blank">TroopWebHost Newsletter</a></li>
+  <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#ModalAboutSite">About This Site</a></li>
+  </ul>
+</div>
+<div class="modal fade" id="ModalAboutSite" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <img src="https://www.TroopWebHost.com/images/Compass50.png" height="50" width="50" style="float: left; margin-top: 10px; margin-bottom: 20px; margin-left: 0px; margin-right: 15px;">
+        This site is provided by <a href="https://www.TroopWebHost.com" target="_blank">TroopWebHost</a>
+        <br><br>
+        Copyright&nbsp; 2025 &nbsp;Web Host Services LLC
+        <br><br>
+        The current user is:&nbsp; &nbsp; troop2338.info
+        <br><br>
+        The URL for this page is:&nbsp; &nbsp; https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Custom_Form_ID=2&Application_ID=3562
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="ModalReportingOptions" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="form-group">
+          <input type=radio  name="Report_option" id="Report_option_1" value="1" tabindex=1 value="on" > &nbsp;
+          Open reports as PDF only
+        </div>
+        <div class="form-group">
+          <input type=radio  name="Report_option" id="Report_option_2" value="2" tabindex=2 value="on"  checked> &nbsp;
+          Choose to open reports either as PDF or Excel
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input class="btn btn-success" style="float: left;" tabindex=3 type=button value="OK" name="Report_option_Button" id="Report_option_Button" onClick="LinkTo('reportoption','');" >
+        <button type="button" class="btn btn-danger" style="float: right;" tabindex=4 data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="ModalReport" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="text-center" id="ModalReportPop" name="ModalReportPop">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="page-title">
+About Our Troop
+</p>
+<input type=hidden name="Custom_Form_ID" id="Custom_Form_ID" value="2">
+<div class="new-row">
+  <div class="container-fluid container-flex">
+    <div class="center-block "  style="margin-bottom: 20px; max-width: 1920px; min-width: 200px; ">
+      <div style="display: inline-block; margin-left: 10px; margin-right: 10px; width: calc(100% - 20px);">
+        <div class="custom-hero" style="background-image: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/2025-07-12_Bouldering_20257171417597098987.jpg');"
+            width: 100%; 
+            max-width: 1920px; 
+            height: 1080px; 
+            margin: 0 auto;">
+  <div class="overlay-box left-box">
+    <h2>Facts about Troop 2338</h2>
+    <ul>
+      <li>
+        We are an
+        <a href="https://youtu.be/r-fHWPnSx60">all boy</a> troop for ages 11–17. Adult members are welcome and encouraged.
+      </li>
+      <li>We believe that an Eagle rank is possible, and we will every young person reach that goal.</li>
+      <li>We enforce the <a href="https://www.scouting.org/health-and-safety/gss/bsa-scouter-code-of-conduct/">Principles of Scouting</a> for all youth, parents, and adult members of Troop 2338.</li>
+      <li>We are small and agile, with a high adult-to-youth ratio.</li>
+      <li>We do not discriminate based on race, religion, wealth, or national origin. All are welcome.</li>
+    </ul>
+  </div>
+
+  <div class="overlay-box right-box">
+    <h2>Basic Concepts of Scouting</h2>
+    <p>
+      <strong>Scout Oath:</strong> On my honor I will do my best to do my duty to God and my country and to obey the Scout Law; 
+      to help other people at all times; to keep myself physically strong, mentally awake, and morally straight.
+    </p>
+
+    <p>
+      <strong>Scout Law:</strong> A Scout is trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, 
+      thrifty, brave, clean, and reverent.
+    </p>
+
+    <p>
+      <strong>Scout Mission:</strong> The mission of 
+      <a href="https://beascout.scouting.org/">Scouting America</a> is to prepare young people to make ethical and moral 
+      choices over their lifetimes by instilling in them the values of the Scout Oath and Scout Law.
+    </p>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="new-row">
+    <div class="container-fluid container-flex">
+      <div class="center-block "  style="margin-bottom: 20px; max-width: 1920px; min-width: 200px; ">
+        <div style="display: inline-block; margin-left: 10px; margin-right: 10px; width: calc(100% - 20px);">
+          <table style="width: 100%; border-collapse: collapse; background-color: white; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); padding: 1rem;">
+  <tbody>
+    <tr>
+      <td style="padding: 1.5rem; vertical-align: top; text-align: center;">
+
+        <h2>In Troop 2338, We Value...</h2>
+
+        <h3>Character Development</h3>
+        <p>Encompasses the Scout's personal qualities, values, and outlook.</p>
+        <p>A Scout learns confidence, honesty, and self-respect.</p>
+        <p>A Scout respects other people, regardless of differences.</p>
+        <p>A Scout practices their religious beliefs.</p>
+
+        <h3>Citizenship Training</h3>
+        <p>A Scout works among others in a troop with rules based on the common good.</p>
+        <p>A Scout learns about and takes pride in their own national heritage.</p>
+        <p>A Scout understands social, economic, and governmental systems.</p>
+        <p>A Scout learns service, tolerance, and community involvement.</p>
+
+        <h3>Mental and Physical Fitness</h3>
+        <p>A Scout improves their physical condition through exercise and outdoor activities.</p>
+        <p>A Scout encourages good health habits.</p>
+        <p>A Scout discourages drug, alcohol, and tobacco use.</p>
+        <p>A Scout learns sound judgment, resourcefulness, and decision-making skills.</p>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type=hidden name="FirstControl" id="FirstControl" value="">
+    </form>
+    <div style="height: 100px;">&nbsp;</div>
+    </body>
+    </html>
