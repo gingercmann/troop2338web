@@ -1,0 +1,80 @@
+# ================================
+# macOS SYSTEM FILES
+# ================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Finder metadata
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# macOS disk image files
+*.dmg
+
+# ================================
+# NODE / DEPENDENCIES (if used)
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ================================
+# BUILD OUTPUT (optional)
+# ================================
+dist/
+build/
+tmp/
+temp/
+*.log
+
+# ================================
+# ENV FILES / CONFIGS (optional)
+# ================================
+.env
+.env.*.local
+
+# ================================
+# CODE EDITORS
+# ================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# JetBrains IDEs
+.idea/
+
+# ================================
+# SASS/SCSS CACHE (if applicable)
+# ================================
+.sass-cache/
+*.css.map
+*.scssc
+
+# ================================
+# IMAGES (these are NOT ignored!)
+# ================================
+# Your images (e.g., .jpg, .png, .svg) WILL be tracked
+# So no image rules are here unless you ask to ignore them
+
+# ================================
+# SYSTEM BACKUP FILES
+# ================================
+*~
+*.swp
+*.bak
+*.tmp
+*.orig
+*.old
+
+# ================================
+# GIT IGNORE FILE END
+# ================================
