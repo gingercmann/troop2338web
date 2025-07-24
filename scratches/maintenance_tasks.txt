@@ -1,0 +1,12 @@
+- Upload csv roster from my.scouting.org
+
+Upload Training File From MyScouting™
+This program can upload the following file formats that are available from the BSA's My.Scouting.org site:
+
+- Position Training Requirements Report (CSV)
+- Leader Training Completed Report (CSV)
+- Members Having Specific Training Report (CSV)
+- Unit Training Tracking (CSV)
+- YPT Aging Report (CSV)
+- Safeguarding Youth Training Aging Report (CSV)
+- Training Manager Youth Report (CSV)

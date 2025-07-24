@@ -1,0 +1,76 @@
+Subscribe to Calendar:
+https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=45908&Stack=1&Application_ID=3562
+
+Calendar:
+https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45922&Stack=1&Application_ID=3562
+
+Update Personal Information:
+https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=45903&Stack=1&Application_ID=3562     
+
+Integrated Calendar:
+https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=dHJvb3AyMzM4aW5mb0BnbWFpbC5jb20&src=NHIxYWtjNGI0ZmdycHU2NjI0cjZwOTJqaW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Mm1obGM4MDRxOWxtZDhxNWxyaG5qMHBqa3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NXVqdW0yZHBsb25wZGxmNWRjOGZlZWVzMmVhbDVmbjhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20
+
+About Our Troop:
+https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Stack=0&Custom_Form_ID=2&Application_ID=3562
+
+Photo Albums:
+https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61537&Stack=0&Custom_Form_ID=3&Application_ID=3562
+
+Contact Us: 
+https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61545&Stack=0&Custom_Form_ID=5&Application_ID=3562
+
+Privacy Policy:
+https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61544&Stack=0&Custom_Form_ID=4&Application_ID=3562
+
+Photo Gallery
+https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45936&Stack=0&Application_ID=3562
+
+Video Gallery
+https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45937&Stack=1&Application_ID=3562
+
+HISTORY:
+
+2024 - https://link.shutterfly.com/17tdTQ5FdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2024_20257221848135199652.jpg
+
+2023 - https://link.shutterfly.com/l6iqi2HOdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2023_2025722184814533056.jpeg
+
+2022 - https://link.shutterfly.com/LcvmCjbGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2022_20257221848134818006.jpeg
+
+2020 - https://link.shutterfly.com/P59B6dKOdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2020_20257221848135199652.jpeg
+
+2019 - https://link.shutterfly.com/BZL2bgfGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2019_2025722184813358350.jpeg
+
+2018 - https://link.shutterfly.com/D8sZYyjGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2018_20257221848137326010.jpeg
+
+2017 - https://link.shutterfly.com/mcKZxClGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2017_20257221848138754327.jpeg
+
+2016 - https://link.shutterfly.com/NPneIzmGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2016_20257221848137674640.jpeg
+
+2015 - https://link.shutterfly.com/mPRQ3fnGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2015_20257221848132343019.jpeg
+
+2014 - https://link.shutterfly.com/a7yKs9nGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2014_20257221848131786667.jpeg
+
+2013 - https://link.shutterfly.com/cxvPyRoGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2013_2025722184813914702.jpeg
+
+2012 - https://link.shutterfly.com/kAqsSCpGdVb
+https://troopwebhost.blob.core.windows.net/troop2338georgetown/2012_2025722184814533056.jpeg
+
+
+HISTORY UPLOADS: 
+Shutterfly -> https://link.shutterfly.com/X7s6vKMGdVb
+Google -> 
+
+
+
+exiftool -DateTimeOriginal="2025:07:12 10:30:00" -CreateDate="2025:07:12 10:30:00" *.*
