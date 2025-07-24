@@ -187,7 +187,7 @@ a:hover:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a):not(.navm
 a:focus:not(.navlink):not(.navrow a):not(.navtable a):not(.navtools a):not(.navmenu a),
 .widgetlink:hover,
 .widgetlink:focus {
-  color: var(--color-link-hover) !important;
+  color: var(--color-light-hover) !important;
   text-decoration: underline !important;
 }
 
