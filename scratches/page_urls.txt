@@ -73,4 +73,6 @@ Google ->
 
 
 
-exiftool -DateTimeOriginal="2025:07:12 10:30:00" -CreateDate="2025:07:12 10:30:00" *.*
+https://calendar.google.com/calendar/embed?height=768&wkst=1&ctz=America%2FChicago&showTabs=0&showCalendars=0&src=dHJvb3AyMzM4aW5mb0BnbWFpbC5jb20&src=NHIxYWtjNGI0ZmdycHU2NjI0cjZwOTJqaW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Mm1obGM4MDRxOWxtZDhxNWxyaG5qMHBqa3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NXVqdW0yZHBsb25wZGxmNWRjOGZlZWVzMmVhbDVmbjhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20
+
+https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&mode=AGENDA&src=dHJvb3AyMzM4aW5mb0BnbWFpbC5jb20&src=NHIxYWtjNGI0ZmdycHU2NjI0cjZwOTJqaW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Mm1obGM4MDRxOWxtZDhxNWxyaG5qMHBqa3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NXVqdW0yZHBsb25wZGxmNWRjOGZlZWVzMmVhbDVmbjhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20

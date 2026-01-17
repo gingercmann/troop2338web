@@ -10,3 +10,9 @@ This program can upload the following file formats that are available from the B
 - YPT Aging Report (CSV)
 - Safeguarding Youth Training Aging Report (CSV)
 - Training Manager Youth Report (CSV)
+
+Maintain Advancement
+- Export from TWH
+- Import into Scoutbook
+
+

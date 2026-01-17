@@ -53,25 +53,33 @@
         display: block;
         border-bottom: 1px solid #ccc;
     }
-    
+
     .google-album-box figcaption {
-        background: #393636;        /* match .album-label */
-        font-weight: bold;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: white !important;
+        background: linear-gradient(to right, #2e2e2e, #393636); /* subtle depth */
+        font-weight: 600;
+        padding: 1em 1.25em;
+        font-size: 1.4rem;
+        color: #fdfdfd !important;
         text-align: center;
-    }
-    
-    .google-album-box figcaption a {
-        color: white !important;
+        border-top: 1px solid #555;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 2px 4px rgba(0,0,0,0.3);
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+      }
+      
+      .google-album-box figcaption a {
+        color: #ffffff !important;
         text-decoration: none;
-    }
-    
-    .google-album-box figcaption a:hover {
+        font-weight: 600;
+      }
+      
+      .google-album-box figcaption a:hover {
+        color: #ffd700 !important;
         text-decoration: underline;
-    }
-    
+      }
+      
     </style>
  
   <div class="dark-section">
@@ -79,8 +87,9 @@
     <h3>Current Events</h3>
         <p>
       Most of our stories are told through photos and video,
-      carefully gathered and shared in a few trusted places. These days, you'll find active previews for many of our recent adventures — a visual history of our journey — right here on our website. 
-      We encourage every family to contribute to events as they happen. You can view all of our photos in the
+      carefully gathered and shared in a few trusted places. These days, you'll find a visual history of our journey right here on our website. 
+      It's easy to contribute photos to <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45922&Stack=1&Application_ID=3562
+"><strong>any event,</strong></a> and we encourage every family to do so as they happen. If you're on your desktop, have a look to your right - those are our latest adventures. On your mobile, they will appear right below the linked Google album. You can view all of our photos in the
       <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45936&Stack=0&Application_ID=3562"><strong>Site Photo Gallery</strong></a>,
       and don’t miss the
       <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45937&Stack=1&Application_ID=3562"><strong>Site Video Gallery</strong></a>,
@@ -89,13 +98,15 @@
 
     <h3>The Google Album</h3>
 
-    <!-- GOOGLE ALBUM -->    
-    <div class="album-grid">
-    <div class="google-album-box"><a href="https://photos.app.goo.gl/LUG12KREpc4pXuJV9" target="_blank"><img alt="Troop 2338 Google Album Cover" class="img-responsive" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/Google-Album-Cover_2025722192676495519.jpg" /> </a>
-    <figcaption><a href="https://photos.app.goo.gl/LUG12KREpc4pXuJV9" target="_blank">Troop 2338 – Google Photo Album</a></figcaption>
-    </div>
-    </div>
-
-    <p>When we have more to show, there is an even larger collection of photos — and videos — in our Google account. For a more complete look at our adventures, click the linked album above. Enjoy and don't forget to contribute.</p>
+    <figure class="google-album-box">
+        <a href="https://photos.app.goo.gl/LUG12KREpc4pXuJV9" target="_blank">
+          <img alt="Troop 2338 Google Album Cover" class="img-responsive" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/Google-Album-Cover_2025722192676495519.jpg" />
+        </a>
+        <figcaption>
+          <a href="https://photos.app.goo.gl/LUG12KREpc4pXuJV9" target="_blank">Troop 2338 – Google Photo Album</a>
+        </figcaption>
+    </figure>
+      
+    <p>When we have more to show, there is an even larger collection of photos — and videos — in our Google account. For a more complete look at our adventures, click the linked Google Album. Enjoy and don't forget to contribute.</p>
 
   </div>

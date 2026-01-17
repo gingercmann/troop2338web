@@ -82,7 +82,7 @@ body {
 }
 
 .container-fluid {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -90,22 +90,52 @@ body {
 }
 
 .center-block {
-  display: table;
+  display: block;
   margin-left: auto !important;
   margin-right: auto !important;
-  max-width: 100%;
+  width: 100%;
 }
 
-.center-block > div {
-  display: block !important;
+/* Ensure the outer <td> fills the width of the page */
+td.center-block.table-responsive {
+  display: block;
   width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 10px;
-  padding-right: 10px;
+  max-width: 100% !important;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
+/* Ensure the table inside fills the block and is centered */
+td.center-block.table-responsive > table {
+  width: 100% !important;
+  margin: 0 auto !important;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* Optional: center table headers and content */
+td.center-block.table-responsive th,
+td.center-block.table-responsive td {
+  text-align: center;
+}
+
+/* Fix float:right select box wrapped in a div */
+.center-block.table-responsive td > div[style*="float:right"] {
+  float: none !important;
+  text-align: right;
+}
+
+/* Prevent float:right select boxes from collapsing the cell */
+td.center-block.table-responsive select {
+  float: none !important;
+  text-align: right;
+  display: inline-block;
+}
+
+/* Optional: make sure inner headers don't get squashed */
+td.center-block.table-responsive th {
+  white-space: nowrap;
+}
 
 h2, h3 {
   width: 100%;
@@ -129,6 +159,11 @@ h3 {
   width: 100%;
 }
 
+td.text-center .bodysubheading {
+  display: block;
+  text-align: center !important;
+  width: 100%;
+}
 
 .bodytext {
   font-size: var(--font-md) !important;
@@ -168,65 +203,6 @@ h3 {
   letter-spacing: 1px; /* adds space between letters */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 
                0 0 8px rgba(255, 215, 0, 0.6); /* dark + golden glow */
-}
-
-
-/* ============================== */
-/*         TABLE STYLES          */
-/* ============================== */
-
-/* Outer <td> containing the responsive table */
-td.center-block.table-responsive {
-  display: block;
-  width: 100% !important;
-  max-width: 960px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-
-/* Inner table inside the td */
-td.center-block.table-responsive > table {
-  width: 100% !important;
-  margin: 0 auto !important;
-  border-collapse: collapse;
-  table-layout: auto;
-}
-
-/* Align headers and cells */
-td.center-block.table-responsive th,
-td.center-block.table-responsive td {
-  text-align: center;
-}
-
-/* Prevent header cells from wrapping */
-td.center-block.table-responsive th {
-  white-space: nowrap;
-}
-
-/* Fix float:right select box inside a div */
-.center-block.table-responsive td > div[style*="float:right"] {
-  float: none !important;
-  text-align: right;
-}
-
-/* Prevent select boxes from collapsing */
-td.center-block.table-responsive select {
-  float: none !important;
-  text-align: right;
-  display: inline-block;
-}
-
-td.text-center .bodysubheading {
-  display: block;
-  text-align: center !important;
-  width: 100%;
-}
-
-td.pagecontent > table {
-  margin: 0 auto !important;
-  width: auto !important;
 }
 
 
