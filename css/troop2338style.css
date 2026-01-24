@@ -680,6 +680,301 @@ th.colhead {
   display: none;
 }
 
+
+/* ============================== */
+/*         FOOTER        */
+
+.custom-footer {
+  width: 100%;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background-color: var(--color-dark);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-light);
+  border-top: 1px solid #ccc;
+}
+
+
+/* ============================== */
+/*        MOBILE FRIENDLY         */
+/* ============================== */
+
+@media (max-width: 768px) {
+
+  /* ---------- Prevent page overflow, but allow table scroll ---------- */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* TroopWebHost outer layout tables (prevents page expanding) */
+  body > table,
+  body > table > tbody,
+  body > table > tbody > tr,
+  body > table > tbody > tr > td {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- Typography ---------- */
+  h1 { font-size: var(--font-xl) !important; }
+  h2 { font-size: var(--font-lg) !important; }
+  h3 { font-size: var(--font-md) !important; }
+  h4 { font-size: var(--font-sm) !important; }
+  h5 { font-size: var(--font-xs) !important; }
+  h6 { font-size: 1rem !important; }
+
+  .page-title { font-size: var(--font-md) !important; }
+  body { font-size: var(--font-sm) !important; }
+
+  /* ---------- Layout ---------- */
+  .container-flex {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* ---------- Navigation ---------- */
+  .navmenu {
+    position: fixed;
+    top: 30px;
+    left: -100%;
+    height: calc(100vh - 50px);
+    background-color: hsla(0, 3%, 22%, 0.95);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: left 0.3s ease-in-out;
+    border-radius: 0 8px 8px 0;
+    z-index: 9999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    box-sizing: border-box;
+    border: none !important;
+  }
+
+  .navmenu.open { left: 0 !important; }
+
+  .navmenulower,
+  .navmenulower2,
+  .navmenulower3 {
+    background-color: hsla(0, 3%, 22%, 0.95) !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 2px !important;
+  }
+
+  .navmenulower > ul > li,
+  .navmenulower2 > ul > li,
+  .navmenulower3 > ul > li {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 2px !important;
+    padding: 4px 8px !important;
+  }
+
+  .navmenu *,
+  .navmenu ul,
+  .navmenu li,
+  .navmenu li a {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    margin: 2px !important;
+    padding: 0 !important;
+  }
+
+  .navmenu li a {
+    display: block;
+    padding: 6px 8px !important;
+    color: var(--color-light) !important;
+    font-size: var(--font-xs) !important;
+    text-decoration: none;
+  }
+
+  .navmenu li a:hover,
+  .navmenu li a:focus {
+    background-color: rgba(255, 215, 0, 0.15) !important;
+    color: var(--color-link-hover) !important;
+    text-decoration: underline;
+  }
+
+  .navtools {
+    width: 280px !important;
+    background-color: hsla(0, 3%, 22%, 0.9) !important;
+    color: #f0f0f0 !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+    font-size: var(--font-xs) !important;
+    line-height: 1.3 !important;
+    border: none !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .navtools a { color: var(--color-link-hover) !important; }
+
+  .navicon {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 1.2rem !important;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .navicon span:last-child {
+    font-size: 1rem !important;
+    line-height: 28px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: var(--color-light) !important;
+    user-select: none;
+  }
+
+  .navrow,
+  .navtable {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- IMPORTANT: reset nav-tab color overriding rule (EXCEPT .nav-tabs) ---------- */
+  [class^="nav"]:not(.navicon):not(.nav-tabs),
+  [class^="nav"]:not(.navicon):not(.nav-tabs) * {
+    font-size: var(--font-xs) !important;
+    font-weight: normal !important;
+    padding: 1px !important;
+    color: var(--color-light) !important;
+  }
+
+  /* ---------- Calendar / Event Pages ---------- */
+  .content,
+  .eventDetail {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: visible !important; /* <-- UPDATED */
+  }
+
+  .eventDetail {
+    overflow-wrap: anywhere;
+  }
+
+  .eventDetail * {
+    max-width: 100%;
+  }
+
+  /* ---------- Event signup / roster table ---------- */
+  .center-block.table-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+
+  .center-block.table-responsive table {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 100% !important;
+    table-layout: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .center-block.table-responsive td,
+  .center-block.table-responsive th {
+    white-space: normal !important;
+    word-break: break-word !important;
+    min-width: 0 !important;
+  }
+
+  .center-block.table-responsive input {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- FIX: Radio labels (YES / NO) ---------- */
+  .center-block.table-responsive label {
+    display: inline-block !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .center-block.table-responsive input[type="radio"] {
+    width: auto !important;
+  }
+
+  /* =========================
+    FORCE NAV-TAB LINK COLOR
+    ========================= */
+
+  .nav.nav-tabs,
+  .nav.nav-tabs li,
+  .nav.nav-tabs a,
+  .nav.nav-tabs .nav-link,
+  .nav.nav-tabs .dropdown-toggle,
+  .nav.nav-tabs button.dropdown-toggle {
+
+    color: #222 !important;
+  }
+
+  /* Force all link states (this is the key part) */
+  .nav.nav-tabs a:link,
+  .nav.nav-tabs a:visited,
+  .nav.nav-tabs a:hover,
+  .nav.nav-tabs a:active,
+  .nav.nav-tabs a:focus,
+  .nav.nav-tabs .nav-link:link,
+  .nav.nav-tabs .nav-link:visited,
+  .nav.nav-tabs .nav-link:hover,
+  .nav.nav-tabs .nav-link:active,
+  .nav.nav-tabs .nav-link:focus {
+    color: #222 !important;
+  }
+
+  /* Active tab styling */
+  .nav.nav-tabs li.active a,
+  .nav.nav-tabs .nav-link.active {
+    color: #222 !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+  }
+
+  /* ---------- Calendar table: allow horizontal scroll ---------- */
+  .table.table-striped.table-bordered.table-condensed.table-responsive.table-curved {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- NEW FIX: allow calendar to scroll right ---------- */
+  .table.table-striped.table-bordered.table-condensed.table-responsive.table-curved {
+    overflow-x: auto !important;
+  }
+
+  .table.table-striped.table-bordered.table-condensed.table-responsive.table-curved table {
+    width: auto !important;
+    min-width: 100% !important;
+  }
+
+
 @media (max-width: 768px) {
 
   /* Remove background-image and before pseudo on mobile */
@@ -744,198 +1039,11 @@ th.colhead {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
-}
+ }
 
-
-/* ============================== */
-/*         FOOTER        */
-
-.custom-footer {
-  width: 100%;
-  margin: 2rem auto 0;
-  padding: 1.5rem;
-  background-color: var(--color-dark);
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-light);
-  border-top: 1px solid #ccc;
-}
-
-
-/* ============================== */
-/*         MOBILE FRIENDLY        */
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: var(--font-xl) !important;  /* was font-xxl or font-title */
-  }
-
-  h2 {
-    font-size: var(--font-lg) !important;  /* was font-xl */
-  }
-
-  h3 {
-    font-size: var(--font-md) !important;  /* was font-lg */
-  }
-
-  h4 {
-    font-size: var(--font-sm) !important;  /* was font-md */
-  }
-
-  h5 {
-    font-size: var(--font-xs) !important;  /* was font-sm */
-  }
-
-  h6 {
-    font-size: 1rem !important;  /* smaller than font-xs */
-  }
-
-  .page-title {
-    font-size: var(--font-md) !important;
-  }
-
-  .container-flex {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .navmenu {
-    position: fixed;
-    top: 30px;
-    left: -100%;
-    height: calc(100vh - 50px);
-    transition: left 0.3s ease-in-out;
-    background-color: hsla(0, 3%, 22%, 0.95);
-    overflow-y: auto;
+  /* Allow horizontal scroll ONLY on pages with wide tables (calendar) */
+  body:has(table.table) {
+    overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
-    border-radius: 0 8px 8px 0;
-    z-index: 9999;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
-    border: none !important;
-    padding: 6px; /* reduced from 10px */
-    box-sizing: border-box;
-  }
-
-  .navmenu.open {
-    left: 0 !important;
-  }
-
-  .navmenulower,
-  .navmenulower2,
-  .navmenulower3 {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: hsla(0, 3%, 22%, 0.95) !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 2px !important;
-  }
-
-  .navmenulower > ul > li,
-  .navmenulower2 > ul > li,
-  .navmenulower3 > ul > li {
-    border: none !important;
-    box-shadow: none !important;
-    background: none !important;
-    margin: 2px !important;
-    padding: 4px 8px !important;
-  }
-
-  .navmenu *,
-  .navmenu ul,
-  .navmenu li,
-  .navmenu li a {
-    border: none !important;
-    box-shadow: none !important;
-    background: none !important;
-    outline: none !important;
-    border-radius: 0 !important;
-    margin: 2px !important;
-    padding: 0 !important;
-  }
-
-  .navmenu li a {
-    padding: 6px 8px !important;
-    display: block;
-    color: var(--color-light) !important;
-    text-decoration: none;
-    font-size: var(--font-xs) !important;
-  }
-
-  .navmenu li a:hover,
-  .navmenu li a:focus {
-    background-color: rgba(255, 215, 0, 0.15) !important;
-    color: var(--color-link-hover) !important;
-    text-decoration: underline;
-  }
-
-  .navtools {
-    width: 280px !important;
-    color: #f0f0f0 !important;
-    background-color: hsla(0, 3%, 22%, 0.9) !important;
-    padding: 10px !important;
-    box-sizing: border-box;
-    border: none !important;
-    font-size: var(--font-xs) !important;
-    line-height: 1.3 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-
-  .navicon {
-    top: 0;
-    left: 0;
-    height: 32px;
-    line-height: 32px;
-    padding: 0 6px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    font-size: 1.2rem !important;
-    width: auto !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 3px !important;
-  }
-
-  .navicon span:last-child {
-    font-size: 1rem !important;
-    line-height: 28px !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    color: var(--color-light) !important;
-    user-select: none;
-  }
-  
-  .navrow {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    overflow-x: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .navtable {
-    overflow-x: hidden !important; /* prevent horizontal scroll */
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .navtools a {
-    color: var(--color-link-hover) !important;
-  }
-
-  [class^="nav"]:not(.navicon),
-  [class^="nav"]:not(.navicon) * {
-    font-size: var(--font-xs) !important;
-    font-weight: normal !important;
-    padding: 1px 1px !important;
-    color: var(--color-light) !important;
-  }
-
-  body {
-    font-size: var(--font-sm) !important;
   }
 }
