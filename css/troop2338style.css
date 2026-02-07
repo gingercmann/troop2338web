@@ -357,10 +357,12 @@ th.colhead {
 /*          NAVIGATION             */
 .navicon {
   position: fixed;
-  top: 3px;
-  left: 3px;
+  top: 0px;
+  left: 0px;
   z-index: 1030;
   height: 36px;
+  width: 110px;
+  justify-content: center;
   line-height: 36px;
   padding: 0 6px;
   margin: 0;
@@ -680,6 +682,17 @@ th.colhead {
   display: none;
 }
 
+/* Fix for long select options overflowing */
+select#WidgetType {
+  width: 100% !important;           /* keep it within its container */
+  max-width: 100% !important;       /* prevents overflow */
+  box-sizing: border-box !important;
+
+  white-space: nowrap !important;   /* prevent wrapping */
+  overflow: hidden !important;      /* hide overflow */
+  text-overflow: ellipsis !important; /* show ... */
+  padding-right: 1.5rem !important; /* keeps dropdown arrow visible */
+}
 
 /* ============================== */
 /*         FOOTER        */
@@ -826,19 +839,21 @@ th.colhead {
     display: flex !important;
     align-items: center !important;
     gap: 3px !important;
-    height: 32px;
-    line-height: 32px;
+    height: 36px;
+    line-height: 36px;
     padding: 0 6px;
     border-radius: 4px;
-    font-size: 1.2rem !important;
+    font-size: var(--font-sm) !important;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
   .navicon span:last-child {
-    font-size: 1rem !important;
-    line-height: 28px !important;
+    font-size: var(--font-sm) !important;
+    line-height: 36px !important;
+    width: 100%;              /* fill the full width */
+    text-align: center;       /* center the icon */
     font-family: Arial, Helvetica, sans-serif !important;
     color: var(--color-light) !important;
     user-select: none;
@@ -854,7 +869,7 @@ th.colhead {
   /* ---------- IMPORTANT: reset nav-tab color overriding rule (EXCEPT .nav-tabs) ---------- */
   [class^="nav"]:not(.navicon):not(.nav-tabs),
   [class^="nav"]:not(.navicon):not(.nav-tabs) * {
-    font-size: var(--font-xs) !important;
+    font-size: var(--font-sm) !important;
     font-weight: normal !important;
     padding: 1px !important;
     color: var(--color-light) !important;
@@ -1045,5 +1060,14 @@ th.colhead {
   body:has(table.table) {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
+  }
+
+  select#WidgetType {
+    font-size: 1.1rem !important;   /* smaller font helps prevent overflow */
+  }
+
+  /* Optional: make dropdown text wrap (some browsers support it) */
+  select#WidgetType option {
+    white-space: normal !important;
   }
 }
