@@ -714,8 +714,6 @@ select#WidgetType {
 /* ============================== */
 @media (max-width: 900px) {
 
-/* @media (max-width: 768px) { */
-
   /* ---------- Prevent page overflow, but allow table scroll ---------- */
   html,
   body {
@@ -723,16 +721,23 @@ select#WidgetType {
     overflow-x: hidden !important;
   }
 
-  /* TroopWebHost outer layout tables (prevents page expanding) */
-  body > table,
-  body > table > tbody,
-  body > table > tbody > tr,
-  body > table > tbody > tr > td {
+  /* ===================================== */
+  /* SAFE MOBILE TABLE HANDLING (TWH)      */
+  /* ===================================== */
+
+  /* Do NOT touch TroopWebHost layout tables */
+  body > table {
+    display: table !important;
+  }
+
+  /* Only allow scrolling on actual data tables */
+  .table-responsive {
     display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
+
 
   /* ---------- Typography ---------- */
   h1 { font-size: var(--font-xl) !important; }
@@ -770,6 +775,7 @@ select#WidgetType {
   }
 
   .navmenu.open { left: 0 !important; }
+
   /* TroopWebHost often opens menu via inline style */
   .navmenu[style*="left: 0"],
   .navmenu[style*="left:0"] {
@@ -797,9 +803,9 @@ select#WidgetType {
     padding: 4px 8px !important;
   }
 
-.navmenu *,
-.navmenu ul,
-.navmenu li {
+  .navmenu *,
+  .navmenu ul,
+  .navmenu li {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
@@ -857,8 +863,8 @@ select#WidgetType {
   .navicon span:last-child {
     font-size: var(--font-sm) !important;
     line-height: 36px !important;
-    width: 100%;              /* fill the full width */
-    text-align: center;       /* center the icon */
+    width: 100%;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif !important;
     color: var(--color-light) !important;
     user-select: none;
@@ -886,7 +892,7 @@ select#WidgetType {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    overflow-x: visible !important; /* <-- UPDATED */
+    overflow-x: visible !important;
   }
 
   .eventDetail {
@@ -907,10 +913,8 @@ select#WidgetType {
   }
 
   .center-block.table-responsive table {
-    width: auto !important;
-    max-width: none !important;
-    min-width: 100% !important;
-    table-layout: auto !important;
+    width: 100% !important;        /* FIXED: was max-content */
+    table-layout: fixed !important; /* force wrap inside screen */
     box-sizing: border-box !important;
   }
 
@@ -921,27 +925,9 @@ select#WidgetType {
     min-width: 0 !important;
   }
 
-  .center-block.table-responsive input {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* ---------- FIX: Radio labels (YES / NO) ---------- */
-  .center-block.table-responsive label {
-    display: inline-block !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    max-width: 100% !important;
-  }
-
-  .center-block.table-responsive input[type="radio"] {
-    width: auto !important;
-  }
-
   /* =========================
-    FORCE NAV-TAB LINK COLOR
-    ========================= */
+     FORCE NAV-TAB LINK COLOR
+     ========================= */
 
   .nav.nav-tabs,
   .nav.nav-tabs li,
@@ -949,30 +935,7 @@ select#WidgetType {
   .nav.nav-tabs .nav-link,
   .nav.nav-tabs .dropdown-toggle,
   .nav.nav-tabs button.dropdown-toggle {
-
     color: #222 !important;
-  }
-
-  /* Force all link states (this is the key part) */
-  .nav.nav-tabs a:link,
-  .nav.nav-tabs a:visited,
-  .nav.nav-tabs a:hover,
-  .nav.nav-tabs a:active,
-  .nav.nav-tabs a:focus,
-  .nav.nav-tabs .nav-link:link,
-  .nav.nav-tabs .nav-link:visited,
-  .nav.nav-tabs .nav-link:hover,
-  .nav.nav-tabs .nav-link:active,
-  .nav.nav-tabs .nav-link:focus {
-    color: #222 !important;
-  }
-
-  /* Active tab styling */
-  .nav.nav-tabs li.active a,
-  .nav.nav-tabs .nav-link.active {
-    color: #222 !important;
-    font-weight: bold !important;
-    text-decoration: underline !important;
   }
 
   /* ---------- Calendar table: allow horizontal scroll ---------- */
@@ -984,20 +947,12 @@ select#WidgetType {
     box-sizing: border-box !important;
   }
 
-  /* ---------- NEW FIX: allow calendar to scroll right ---------- */
-  .table.table-striped.table-bordered.table-condensed.table-responsive.table-curved {
-    overflow-x: auto !important;
-  }
-
   .table.table-striped.table-bordered.table-condensed.table-responsive.table-curved table {
     width: auto !important;
     min-width: 100% !important;
   }
 
-
-@media (max-width: 768px) {
-
-  /* Remove background-image and before pseudo on mobile */
+  /* ---------- Hero stacking ---------- */
   .custom-hero {
     background-image: none !important;
     position: relative;
@@ -1010,15 +965,13 @@ select#WidgetType {
     box-sizing: border-box;
     max-width: 100vw !important;
     width: 100% !important;
-}
+  }
 
-  /* Remove ::before pseudo */
   .custom-hero::before {
     display: none !important;
     content: none !important;
   }
 
-  /* Show the image as a normal img */
   .custom-hero-img {
     display: block !important;
     width: 100% !important;
@@ -1027,9 +980,8 @@ select#WidgetType {
     margin-bottom: 1rem;
   }
 
-  /* Overlay boxes stack below image, full width */
   .overlay-box {
-    position: static; /* stack naturally */
+    position: static;
     max-width: 100% !important;
     min-width: auto !important;
     margin: 0 0 1rem 0;
@@ -1042,13 +994,9 @@ select#WidgetType {
     z-index: 1;
   }
 
-  .overlay-box:last-child {
-    margin-bottom: 0; /* Remove bottom margin on last overlay box */
-  }
-
   .custom-hero-spacer {
-    height: 0 !important;  /* remove extra space on mobile */
-  }  
+    height: 0 !important;
+  }
 
   .row {
     margin-left: 0 !important;
@@ -1059,20 +1007,48 @@ select#WidgetType {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
- }
 
-  /* Allow horizontal scroll ONLY on pages with wide tables (calendar) */
+  /* ===================================================== */
+  /* FIX: THESE MUST STAY INSIDE THE MEDIA QUERY            */
+  /* ===================================================== */
+
   body:has(table.table) {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
   select#WidgetType {
-    font-size: 1.1rem !important;   /* smaller font helps prevent overflow */
+    font-size: 1.1rem !important;
   }
 
-  /* Optional: make dropdown text wrap (some browsers support it) */
   select#WidgetType option {
     white-space: normal !important;
   }
+
+  /* ============================= */
+  /*   TABLE OVERFLOW FIX (MOBILE) */
+  /* ============================= */
+
+  .table-responsive,
+  .center-block.table-responsive {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .table-responsive table,
+  .center-block.table-responsive table {
+    width: 100% !important;        /* FIXED: was max-content */
+    table-layout: fixed !important; /* force wrap inside screen */
+  }
+
+  /* FIX: nowrap was re-breaking overflow */
+  .table-responsive td,
+  .table-responsive th {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
 }
