@@ -1,259 +1,73 @@
-  <style>
-    @media only screen and (max-width: 768px) {
-      .desktop-only {
-        display: none !important;
-      }
+<style>
+  /* 1. Toggle Logic */
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .desktop-only {
+    display: block !important; 
+    width: 100% !important;
+  }
 
-      .mobile-only {
-        display: block !important;
-      }
+  /* Font Scaling */
+  .desktop-text p, .mobile-text p {
+    font-size: var(--font-md) !important;
+  }
 
-      .mobile-table {
-        width: 100% !important;
-        border-collapse: collapse;
-      }
-
-      .mobile-text,
-      .mobile-images {
-        display: block;
-        width: 100% !important;
-        padding: 1em;
-      }
-
-      .mobile-images {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1em;
-        text-align: center;
-      }
-
-      .mobile-images figure {
-        max-width: 30%;
-        flex: 1 1 30%;
-      }
-
-      .mobile-images img {
-        width: 100%;
-        height: auto;
-      }
-
-      .mobile-images figcaption {
-        font-size: 0.85em;
-        margin-top: 0.5em;
-      }
+  /* 2. Mobile Specific Styles */
+  @media only screen and (max-width: 768px) {
+    .desktop-only {
+      display: none !important;
     }
 
-    @media only screen and (min-width: 769px) {
-      .desktop-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      .desktop-text {
-        vertical-align: top;
-        padding: 1em;
-      }
-
-      .desktop-images {
-        vertical-align: top;
-        width: 150px;
-        padding: 1em;
-        text-align: right;
-      }
-
-      .mobile-only {
-        display: none;
-      }
-
-      .desktop-images figure {
-        margin: 0 0 1em 0;
-      }
-
-      .desktop-images figcaption {
-        text-align: center;
-        font-size: 0.9em;
-        margin-top: 0.5em;
-      }
-
-      .desktop-images img {
-        width: 150px;
-        height: auto;
-      }
+    .mobile-only {
+      display: block !important;
+      width: 100% !important;
     }
-  </style>
+
+    .mobile-text {
+      padding: 1em;
+    }
+  }
+
+  /* 3. Desktop Specific Styles */
+  @media only screen and (min-width: 769px) {
+    .desktop-text {
+      padding: 1.5em;
+    }
+  }
+</style>
+
+<div class="desktop-only">
+  <div class="desktop-text">
+    <p>We are located in Georgetown, Texas, Scouting in the <a href="http://www.sangabrielscoutingcac.com" target="_blank">San Gabriel District</a>. Thinking about Scouting? We <a href="https://www.troop2338.com/join" target="_blank"> accept new members </a>all year. <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Stack=0&Custom_Form_ID=2&Application_ID=3562" target="_blank">Come check us out</a>!</p>
+
+    <h3>Log In</h3>
+    <p>Are you a Scout, Scouter, or parent in our Troop? Go get your credentials from an adult leader. Then, come back here and look for the "Log On" link in the upper right corner of this page. It looks like this:</p>
     
-    <!-- DESKTOP VIEW -->
-    <table class="desktop-table desktop-only">
-      <tr>
-        <td class="des
-    <style>
-    @media only screen and (max-width: 768px) {
-      .desktop-only {
-        display: none !important;
-      }
+    <p style="text-align: center;">
+      <img alt="2338 Login" 
+           class="img-responsive" 
+           src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" 
+           style="display: block; margin-left: auto; margin-right: auto; height: 67px; width: 200px;" />
+    </p>
+    
+    <p>When you click on that link you will be prompted to enter a User ID and password, as shown in <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank" style="color:#0066cc;">this article of the TroopWebHost User Guide</a>.</p>
+    <p>Can't log on? Try the "forgot username and password" link. If you're still stuck, reach out through our usual communication channels—we can help reset or restore your account.</p>
+  </div>
+</div>
 
-      .mobile-only {
-        display: block !important;
-      }
-
-      .mobile-table {
-        width: 100% !important;
-        border-collapse: collapse;
-      }
-
-      .mobile-text,
-      .mobile-images {
-        display: block;
-        width: 100% !important;
-        padding: 1em;
-      }
-
-      .mobile-images {
-        text-align: center;
-      }
-
-      .mobile-images figure {
-        display: inline-block;
-        margin: 0 1em;
-        max-width: 30%;
-      }
-
-      .mobile-images figcaption {
-        text-align: center;
-        font-size: 0.9em;
-        margin-top: 0.5em;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    @media only screen and (min-width: 769px) {
-      .desktop-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      .desktop-text {
-        vertical-align: top;
-        padding: 1em;
-      }
-
-      .desktop-images {
-        vertical-align: top;
-        padding: 1em;
-        text-align: right;
-      }
-
-      .mobile-only {
-        display: none;
-      }
-
-      .desktop-images figure {
-        margin: 0 0 1em 0;
-      }
-
-      .desktop-images figcaption {
-        text-align: center;
-        font-size: 0.9em;
-        margin-top: 0.5em;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-  </style>
-
-  <!-- DESKTOP VIEW -->
-  <table class="desktop-table desktop-only">
-    <tr>
-      <td class="desktop-text">
-        <h2>Welcome</h2>
-
-        <p>If you're a Scout, Scouter, or parent in Troop 2338, you've come to the right place.</p>
-
-        <h3>How do I Start?</h3>
-
-        <p>Reach out to the Troop Committee to request credentials. After you receive them, the first step is to log on. You should see the "Log On" link in the upper right corner of this page. It looks like this:</p>
-
-        <p style="text-align: center;">
-          <img alt="Log On Example" src="https://www.TroopWebHost.com/images/LogonWithPointer.png" />
-        </p>
-
-        <p>When you click on that link you will be prompted to enter a User ID and password, as shown in
-          <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank" style="color:#0066cc;">this article of the TroopWebHost User Guide</a>.
-        </p>
-
-        <p>Can't log on? Try the "forgot username and password" link. If you're still stuck, reach out through our usual communication channels, we can help reset or restore your account.</p>
-      </td>
-
-      <td class="desktop-images">
-        <figure>
-          <img alt="Capital Area Council" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/capital-area-council_copy_2025721128326701397.png"/>
-          <figcaption>Serving in the <a href="https://www.capitolareascouting.org/">Capital Area Council</a></figcaption>
-        </figure>
-
-        <p>&nbsp;</p>
-
-        <figure>
-          <img alt="San Gabriel District" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/san-gabriel-district_202572112103149914.png"/>
-          <figcaption>With the <a href="https://www.facebook.com/sangabrielscouting/">San Gabriel District</a></figcaption>
-        </figure>
-
-        <p>&nbsp;</p>
-
-        <figure>
-          <img alt="Charter Organization" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/sgpclogo_20257211350116995446.jpg"/>
-          <figcaption>Chartered at <a href="https://sgpcgeorgetown.org/">San Gabriel Presbyterian Church</a></figcaption>
-        </figure>
-      </td>
-    </tr>
-  </table>
-
-  <!-- MOBILE VIEW -->
-  <table class="mobile-table mobile-only">
-    <tr>
-      <td class="mobile-text">
-        <h2>Welcome to our new website!</h2>
-
-        <p>We're working right now to give you both a public and private portal that will serve all of our Troop needs. Thanks for your patience while we finish construction. In the meantime, all adult and youth troop leaders can get started right away.</p>
-
-        <h3>How do I Start?</h3>
-
-        <p>Your credentials will arrive via email. After that, the first step is to log on. You should see the "Log On" link in the upper right corner of this page. It looks like this:</p>
-
-        <p style="text-align: center;">
-          <img alt="Log On Example" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png"/>
-        </p>
-
-        <p>When you click on that link you will be prompted to enter a User ID and password, as shown in
-          <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank" style="color:#0066cc;">this article of the TroopWebHost User Guide</a>.
-        </p>
-
-        <p>Can't log on? Try the "forgot username and password" link. If you're still stuck, reach out through our usual communication channels, we can help reset or restore your account.</p>
-      </td>
-    </tr>
-    <tr>
-      <td class="mobile-images">
-        <figure>
-          <img alt="Capital Area Council" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/capital-area-council_copy_2025721128326701397.png"/>
-          <figcaption>Serving in the <a href="https://www.capitolareascouting.org/">Capital Area Council</a></figcaption>
-        </figure>
-
-        <figure>
-          <img alt="San Gabriel District" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/san-gabriel-district_202572112103149914.png"/>
-          <figcaption>With the <a href="https://www.facebook.com/sangabrielscouting/">San Gabriel District</a></figcaption>
-        </figure>
-
-        <figure>
-          <img alt="Charter Organization" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/sgpclogo_20257211350116995446.jpg"/>
-          <figcaption>Chartered at <a href="https://sgpcgeorgetown.org/">San Gabriel Presbyterian Church</a></figcaption>
-        </figure>
-      </td>
-    </tr>
-  </table>
+<div class="mobile-only">
+  <div class="mobile-text">
+    <p>We are located in Georgetown, Texas, Scouting in the <a href="http://www.sangabrielscoutingcac.com" target="_blank">San Gabriel District</a>. Thinking about Scouting? We <a href="https://www.troop2338.com/join" target="_blank"> accept new members </a>all year. <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Stack=0&Custom_Form_ID=2&Application_ID=3562" target="_blank">Come check us out</a>!</p>
+    
+    <h3>Log In</h3>
+    <p style="text-align: center;">
+      <img alt="2338 Login" 
+           class="img-responsive" 
+           src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" 
+           style="display: block; margin-left: auto; margin-right: auto; height: 67px; width: 200px;" />
+    </p>
+    <p>Are you a Scout, Scouter, or parent in our Troop? Reach out for credentials, then look for "Log On" in the top right corner of the screen.</p>
+  </div>
+</div>
