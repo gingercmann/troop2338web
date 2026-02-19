@@ -1,0 +1,139 @@
+body
+{
+ background-color:#FFF;
+}
+
+.form-control
+{
+ background-color:#CEF;
+}
+
+/* Asterisk that appears in front of required fields */
+.RequiredIndicator
+{
+  color:red;
+}
+
+/* Menu icon in top left corner of page */
+.navicon
+{
+  background-color:#B00; 
+  color:#FFF; 
+}
+
+/* Menu bar across the top of the page */
+.navtable
+{
+  background-color:#B00; 
+  color:#FFF;
+}
+.navlink {
+  color:#FF0;
+}
+.navlink > a {
+  color: #FF0;
+}
+.navlink > a:hover,
+.navlink > a:focus,
+.navlink:hover, 
+.navlink:focus {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  color:#FFF;
+}
+
+/* Menu that appears when you click on the menu icon */
+.navmenu > ul > li, .navmenu
+{
+  background-color:#eee;
+}
+.navmenulower > ul > li
+{
+  background-color:#FFF9F9;
+}
+.navmenulower2 > ul > li
+{
+  background-color:#EEF9FF;
+}
+.navmenulower3 > ul > li
+{
+  background-color:#fff;
+}
+
+/* Top banner, which only appears on home page */
+.banner-div
+{
+  background-color:#010;
+}
+
+/* Grid outlines  */
+.table-curved {
+    border-color: #ccc;
+}
+.table-curved td, .table-curved th {
+    border-left-color: #ccc;
+    border-top-color: #ccc;
+}
+
+/* Grid heading */
+.table-striped > thead > tr {
+  background-color: #04D;
+  color: #FFF;
+}
+
+.table-striped > thead > tr > th > a {
+  color: #FFF;
+}
+
+/* Grid body */
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #FFF;
+}
+
+/* Grid footer */
+.table-striped > tfoot > tr {
+  background-color: #999;
+}
+
+/* Group name displayed at top left of page, which is a link to the home page */
+.nav-home-link
+{
+  color:white;
+}
+
+/* Tabs */
+.nav-tabs > li > a,
+.nav-tabs-bottom > li > a {
+  border-color:#ddd;
+  background-color:#CEF;
+}
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+
+.nav-tabs-bottom > li > a:hover {
+  border-color: #ddd #eee #eee;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border-bottom-color: #FFF;
+  
+}
+
+
+.nav-tabs-bottom > li.active > a,
+.nav-tabs-bottom > li.active > a:hover,
+.nav-tabs-bottom > li.active > a:focus {
+  background-color: transparent;
+  border-top-color: #FFF;
+}
+
+/* Search box */
+.search-container
+{
+  background-color: #EEF9FF; 
+}
