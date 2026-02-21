@@ -1,73 +1,121 @@
 <style>
-  /* 1. Toggle Logic */
-  .mobile-only {
-    display: none !important;
+  /* 1. Global Styles */
+  .t2338-login-container {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
   }
+
+  .login-hero {
+    width: 100%;
+    height: 380px;
+    background-image: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/20260209200846-2026-02-09_Eagle-Board-of-Review-1_2026220224423599673.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .login-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center; /* Centers the two main columns */
+  }
+
+  .login-main {
+    flex: 2;
+    min-width: 300px;
+    max-width: 600px; /* Prevents text from stretching too wide when centered */
+  }
+
+  .login-sidebar {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 6px solid #a80000;
+    height: fit-content;
+  }
+
+  h2, h3 { color: #a80000; margin-top: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
   
-  .desktop-only {
-    display: block !important; 
-    width: 100% !important;
+  p { font-size: 1.2rem !important; margin-bottom: 1.2em; color: #444; }
+  .small-note { font-size: 1rem !important; color: #666; font-style: italic; }
+  .t2338-link { color: #a80000; font-weight: bold; text-decoration: underline; }
+
+  /* Login Image Button Styling */
+  .login-image-btn-container {
+    text-align: center;
+    margin: 20px 0;
   }
 
-  /* Font Scaling */
-  .desktop-text p, .mobile-text p {
-    font-size: var(--font-md) !important;
+  .login-image-btn {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
   }
 
-  /* 2. Mobile Specific Styles */
+  .login-image-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #a80000;
+  }
+
   @media only screen and (max-width: 768px) {
-    .desktop-only {
-      display: none !important;
-    }
-
-    .mobile-only {
-      display: block !important;
-      width: 100% !important;
-    }
-
-    .mobile-text {
-      padding: 1em;
-    }
-  }
-
-  /* 3. Desktop Specific Styles */
-  @media only screen and (min-width: 769px) {
-    .desktop-text {
-      padding: 1.5em;
-    }
+    .login-hero { height: 220px; }
+    .login-grid { flex-direction: column; align-items: center; }
+    .login-main, .login-sidebar { max-width: 100%; }
+    p { font-size: 1.15rem !important; }
   }
 </style>
 
-<div class="desktop-only">
-  <div class="desktop-text">
-    <p>We are located in Georgetown, Texas, Scouting in the <a href="http://www.sangabrielscoutingcac.com" target="_blank">San Gabriel District</a>. Thinking about Scouting? We <a href="https://www.troop2338.com/join" target="_blank"> accept new members </a>all year. <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Stack=0&Custom_Form_ID=2&Application_ID=3562" target="_blank">Come check us out</a>!</p>
+<div class="t2338-login-container">
+  
+  <div class="login-hero"></div>
 
-    <h3>Sign ON</h3>
-    <p>Are you a Scout, Scouter, or parent in our Troop? Go get your credentials from an adult leader. Then, come back here and look for the "Log On" link in the upper right corner of this page. It looks like this:</p>
+  <div class="login-grid">
     
-    <p style="text-align: center;">
-      <img alt="2338 Login" 
-           class="img-responsive" 
-           src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" 
-           style="display: block; margin-left: auto; margin-right: auto; height: 67px; width: 200px;" />
-    </p>
-    
-    <p>When you click on that link you will be prompted to enter a User ID and password, as shown in <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank" style="color:#0066cc;">this article of the TroopWebHost User Guide</a>.</p>
-    <p>Can't log on? Try the "forgot username and password" link. If you're still stuck, reach out through our usual communication channels—we can help reset or restore your account.</p>
-  </div>
-</div>
+    <div class="login-main">
+      <h2>Welcome to Troop 2338</h2>
+      <p>Based in Georgetown, Texas, we are proud members of the <a href="http://www.sangabrielscoutingcac.com" target="_blank" class="t2338-link">San Gabriel District</a>.</p>
+      
+      <p>Interested in joining the adventure? We <strong>accept new members all year long</strong>. If you're ready to start your trail to Eagle, <a href="https://www.troop2338.com/join" target="_blank" class="t2338-link">come check us out</a>!</p>
 
-<div class="mobile-only">
-  <div class="mobile-text">
-    <p>We are located in Georgetown, Texas, Scouting in the <a href="http://www.sangabrielscoutingcac.com" target="_blank">San Gabriel District</a>. Thinking about Scouting? We <a href="https://www.troop2338.com/join" target="_blank"> accept new members </a>all year. <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61345&Stack=0&Custom_Form_ID=2&Application_ID=3562" target="_blank">Come check us out</a>!</p>
-    
-    <h3>Sign ON</h3>
-    <p style="text-align: center;">
-      <img alt="2338 Login" 
-           class="img-responsive" 
-           src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" 
-           style="display: block; margin-left: auto; margin-right: auto; height: 67px; width: 200px;" />
-    </p>
-    <p>Are you a Scout, Scouter, or parent in our Troop? Reach out for credentials, then look for "Log On" in the top right corner of the screen.</p>
+      <hr style="border: 0; border-top: 1px solid #ddd; margin: 30px 0;">
+
+      <h3>Sign On</h3>
+      <p>Click the button below or look for the <strong>"Log On"</strong> link in the upper right corner of this page to access your account.</p>
+      
+      <div class="login-image-btn-container">
+        <a href="#" data-toggle="modal" data-target="#ModalLogon" class="login-image-btn">
+          <img class="img-responsive" alt="Click to Log On" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" style="height: 55px; width: auto; margin: 0 auto; display: block;" />
+          <div style="text-align: center; color: #a80000; font-weight: bold; margin-top: 10px; font-size: 0.9rem;">CLICK TO LOG ON</div>
+        </a>
+      </div>
+
+      <p class="small-note" style="margin-top: 20px;">First time? View the <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank">TroopWebHost Login Guide</a>.</p>
+    </div>
+
+    <div class="login-sidebar">
+      <img class="img-responsive" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/rick-and-sam_20262202146179417199.jpeg" style="width: 100%; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" alt="Adult Leadership">
+      
+      <h4 style="margin: 0; color: #333; font-weight: 900; text-transform: uppercase; font-size: 1.1rem;">Login Support</h4>
+      <p style="font-size: 1.05rem !important; margin-top: 12px;">Scouts and parents: If you need your User ID or a password reset, please contact a troop leader.</p>
+      <p style="font-size: 1.05rem !important;">If you've forgotten your details, use the <em>"forgot username and password"</em> link on the login screen.</p>
+    </div>
+
   </div>
 </div>

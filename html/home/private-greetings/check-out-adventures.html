@@ -1,0 +1,91 @@
+<style>
+  .t2338-adventure-hero {
+    display: block;
+    text-decoration: none !important;
+    max-width: 1000px;
+    margin: 10px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  .t2338-adventure-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .adv-hero-bg {
+    background: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/2024-06-20_whitewater_2026220231228566985.jpg') no-repeat center 30%;
+    background-size: cover;
+    /* Height reduced to balance with the TWH event column */
+    min-height: 280px; 
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .adv-hero-overlay {
+    /* Shorter gradient so it doesn't muddy the top half of the photo */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    padding: 25px;
+  }
+
+  .adv-hero-content {
+    max-width: 90%;
+    border-left: 4px solid #a80000;
+    padding-left: 15px;
+  }
+
+  .adv-hero-title {
+    margin: 0 0 5px 0;
+    font-size: 1.5rem; /* Scaled down for better harmony */
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  }
+
+  .adv-hero-p {
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
+
+  .adv-hero-btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000000 !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 768px) {
+    .adv-hero-bg { min-height: 220px; }
+    .adv-hero-title { font-size: 1.2rem; }
+    .adv-hero-p { display: none; } /* Hide paragraph on small mobile to save space */
+  }
+</style>
+
+<a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61537&Stack=0&Custom_Form_ID=3&Application_ID=3562" target="_blank" class="t2338-adventure-hero">
+    <div class="adv-hero-bg">
+        <div class="adv-hero-overlay">
+            <div class="adv-hero-content">
+                <h2 class="adv-hero-title">Check out our Adventures</h2>
+                <p class="adv-hero-p">
+                    Find our recent gallery and capture the best moments!
+                </p>
+                <div class="adv-hero-btn">View Gallery</div>
+            </div>
+        </div>
+    </div>
+</a>
