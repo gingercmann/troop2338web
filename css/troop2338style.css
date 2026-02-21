@@ -820,3 +820,39 @@ button.close:hover {
     opacity: 1 !important;
     color: var(--color-accent) !important;
 }
+
+/* ============================================================ */
+/* THE PENCIL GLYPHICON RECOVERY                                */
+/* ============================================================ */
+
+/* 1. Target the specific glyphicon pencil in table headers */
+th.colhead .glyphicon-pencil, 
+thead th .glyphicon-pencil,
+.table-striped thead th .glyphicon-pencil {
+    position: relative !important; /* Breaks the "float" */
+    top: 2px !important;           /* Fine-tune vertical alignment */
+    left: 0 !important;            /* Resets the float/offset */
+    margin-right: 10px !important; /* Pushes the text away from the icon */
+    color: #ffffff !important;     /* Makes it white to pop on dark bar */
+    font-size: 14px !important;    /* Standardizes the size */
+    float: left !important;        /* Keeps it to the left of the text */
+}
+
+/* 2. Ensure the header cell has enough room on the left */
+th.colhead, 
+.table-striped thead th {
+    padding-left: 12px !important; 
+    text-align: left !important;    /* Left-aligning usually fixes pencil overlap best */
+}
+
+/* 3. If you want the text centered but the pencil on the left */
+/* Use this ONLY if you prefer the text to stay in the middle */
+/*
+th.colhead {
+    text-align: center !important;
+}
+th.colhead .glyphicon-pencil {
+    position: absolute !important;
+    left: 10px !important;
+}
+*/
