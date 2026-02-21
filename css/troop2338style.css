@@ -821,38 +821,47 @@ button.close:hover {
     color: var(--color-accent) !important;
 }
 
-/* ============================================================ */
-/* THE PENCIL GLYPHICON RECOVERY                                */
-/* ============================================================ */
+/* ============================== */
+/* DATA TABLE PENCIL COLUMN FIX   */
+/* ============================== */
 
-/* 1. Target the specific glyphicon pencil in table headers */
-th.colhead .glyphicon-pencil, 
-thead th .glyphicon-pencil,
-.table-striped thead th .glyphicon-pencil {
-    position: relative !important; /* Breaks the "float" */
-    top: 2px !important;           /* Fine-tune vertical alignment */
-    left: 0 !important;            /* Resets the float/offset */
-    margin-right: 10px !important; /* Pushes the text away from the icon */
-    color: #ffffff !important;     /* Makes it white to pop on dark bar */
-    font-size: 14px !important;    /* Standardizes the size */
-    float: left !important;        /* Keeps it to the left of the text */
-}
-
-/* 2. Ensure the header cell has enough room on the left */
-th.colhead, 
-.table-striped thead th {
-    padding-left: 12px !important; 
-    text-align: left !important;    /* Left-aligning usually fixes pencil overlap best */
-}
-
-/* 3. If you want the text centered but the pencil on the left */
-/* Use this ONLY if you prefer the text to stay in the middle */
-/*
-th.colhead {
+/* 1. Target the first column specifically in these scrolling divs */
+.scrollingdiv table tr td:first-child, 
+.scrollingdiv table tr th:first-child {
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
     text-align: center !important;
+    padding: 4px !important;
 }
-th.colhead .glyphicon-pencil {
-    position: absolute !important;
-    left: 10px !important;
+
+/* 2. Stop the Pencil from floating or behaving weirdly */
+.scrollingdiv .glyphicon-pencil {
+    position: static !important; /* Resets any previous 'absolute' or 'fixed' attempts */
+    float: none !important;
+    display: inline-block !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    color: var(--color-link) !important;
 }
-*/
+
+/* 3. Ensure the Table handles the horizontal space correctly */
+.scrollingdiv table {
+    table-layout: auto !important; /* Let the other columns expand naturally */
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+/* 4. Mobile Polish: Keep the Pencil from getting 'lost' on small screens */
+@media (max-width: 768px) {
+    .scrollingdiv {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Ensure the Date column (2nd child) has enough breathing room */
+    .scrollingdiv table tr td:nth-child(2) {
+        white-space: nowrap !important;
+        padding-left: 10px !important;
+    }
+}
