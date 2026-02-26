@@ -1,0 +1,96 @@
+<style>
+  /* FULL WIDTH BREAKOUT - Edge-to-edge logic */
+  .camping-hero-final {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 320px; 
+    background: #000;
+    overflow: hidden;
+  }
+
+  .hero-fire-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(35%);
+    display: block;
+  }
+
+  .hero-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+
+  /* HUGE MOTTO STYLE */
+  .hero-motto {
+    color: #ffffff;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 4.5rem; 
+    font-weight: 900;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    text-shadow: 4px 4px 15px #000000, 0px 0px 30px rgba(0,0,0,0.8);
+  }
+
+  /* REFINED HUB SUBTEXT */
+  .hero-subtext {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .hero-details {
+    color: #ff9d4d; /* High-contrast orange */
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    text-shadow: 2px 2px 5px #000;
+  }
+
+  @media (max-width: 900px) {
+    .camping-hero-final { height: 280px; }
+    .hero-motto { font-size: 3.2rem; }
+    .hero-subtext { font-size: 1.2rem; }
+    .hero-details { font-size: 1rem; letter-spacing: 2px; }
+  }
+
+  @media (max-width: 600px) {
+    .camping-hero-final { height: 230px; }
+    .hero-motto { font-size: 2.5rem; }
+    .hero-subtext { font-size: 1rem; margin-top: 10px; }
+    .hero-details { font-size: 0.85rem; letter-spacing: 1px; }
+  }
+</style>
+
+<div class="camping-hero-final">
+  <img class="img-responsive hero-fire-img" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/2022-04-02-03_BSA-Campout-Down-Home-Ranch_-_120_of_128_2026225232198169575.jpeg" alt="Campfire">
+  
+  <div class="hero-text-overlay">
+    <h1 class="hero-motto">BE PREPARED</h1>
+    <p class="hero-subtext">for your next adventure</p>
+    <p class="hero-details">Resources, checklists, and gear</p>
+  </div>
+</div>

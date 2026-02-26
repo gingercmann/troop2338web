@@ -1,0 +1,109 @@
+<style>
+  .resource-center-wrapper {
+    clear: both;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  /* The Container: Flex on Desktop, Vertical Stack on Mobile */
+  .resource-card {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    background: #fdfdfd;
+    border: 1px solid #d1d1d1;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .resource-thumb {
+    width: 250px; /* Fixed width on desktop */
+    min-height: 200px;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #d1d1d1;
+  }
+
+  .resource-info {
+    flex: 1; /* Takes remaining space */
+    min-width: 300px; /* Forces stack when screen is narrow */
+    padding: 25px;
+  }
+
+  .resource-btn {
+    display: inline-block;
+    text-decoration: none !important;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+  }
+
+  .btn-red { background: #a80000; color: #ffffff !important; }
+  .btn-gold { background: #ffcc00; color: #000000 !important; }
+
+  /* MOBILE FIXES */
+  @media (max-width: 700px) {
+    .resource-thumb { 
+      width: 100%; 
+      height: 150px; 
+      border-right: none; 
+      border-bottom: 1px solid #d1d1d1; 
+    }
+    .resource-info { text-align: center; }
+  }
+</style>
+
+<div class="resource-center-wrapper">
+
+  <h2 style="color: #a80000; border-bottom: 3px solid #ffcc00; padding-bottom: 8px; text-transform: uppercase;">
+    Gear & Equipment
+  </h2>
+
+  <div class="resource-card">
+    <div class="resource-thumb">
+       <div style="text-align:center; color:#999; font-weight:bold; padding: 20px;">
+         <div style="font-size: 40px;">[DOC]</div>
+         PACKING LIST
+       </div>
+    </div>
+    <div class="resource-info">
+      <h3 style="margin: 0 0 10px 0; color: #333;">Checklist for an Overnight Campout</h3>
+      <p style="color: #666; line-height: 1.5; margin-bottom: 20px;">
+        From the 10 Scout Basic Essentials to specific sleeping systems. This is the definitive "don't leave home without it" list.
+      </p>
+      <a href="https://drive.google.com/file/d/1HT0EPFm_2OQSL2S5kDVSqRyqEfZyQ_qm/view" target="_blank" class="resource-btn btn-red">GET THE LIST</a>
+      <a href="https://drive.google.com/file/d/1HT0EPFm_2OQSL2S5kDVSqRyqEfZyQ_qm/view" target="_blank" class="resource-btn btn-gold">VIEW PREVIEW</a>
+    </div>
+  </div>
+
+  <h2 style="color: #a80000; border-bottom: 3px solid #ffcc00; padding-bottom: 8px; text-transform: uppercase;">
+    Trail Food & Nutrition
+  </h2>
+
+  <div class="resource-card">
+    <div class="resource-thumb">
+       <div style="text-align:center; color:#999; font-weight:bold; padding: 20px;">
+         <div style="font-size: 40px;">[GUIDE]</div>
+         TRAIL MEALS
+       </div>
+    </div>
+    <div class="resource-info">
+      <h3 style="margin: 0 0 10px 0; color: #333;">Lunches and Snacks That Camp Well</h3>
+      <p style="color: #666; line-height: 1.5; margin-bottom: 20px;">
+        Strategies for packable meals that pass the "Crush Test." High-energy snacks that won't spoil or get messy.
+      </p>
+      <a href="https://drive.google.com/file/d/1t3SfHeqdkK-pjbOXvg-E8zGc8U0hmIUz/view" target="_blank" class="resource-btn btn-red">GET THE GUIDE</a>
+      <a href="https://drive.google.com/file/d/1t3SfHeqdkK-pjbOXvg-E8zGc8U0hmIUz/view" target="_blank" class="resource-btn btn-gold">VIEW PREVIEW</a>
+    </div>
+  </div>
+
+</div>
