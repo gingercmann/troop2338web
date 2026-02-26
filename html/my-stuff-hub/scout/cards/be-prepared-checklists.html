@@ -1,104 +1,34 @@
 <style>
-  /* THE FIRE CHARACTER - Breathing logic for the card background */
-  @keyframes hubFireGlow {
+  @keyframes fireHeroPulse {
     0% { filter: brightness(75%) saturate(100%); }
     50% { filter: brightness(100%) saturate(130%); }
     100% { filter: brightness(75%) saturate(100%); }
   }
-
-  .t2338-hero-card {
-    display: block;
-    text-decoration: none;
-    width: 100%;             /* Force it to fill available space */
-    max-width: 1000px;       /* Restored your preferred max width */
-    margin: 20px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    position: relative;
-    border: 1px solid #444;
-    transition: transform 0.2s ease;
-    background: #000;
+  .fire-card-container {
+    display: block; text-decoration: none; width: 100%; max-width: 1000px; margin: 20px auto;
+    border-radius: 12px; overflow: hidden; background: #000; border: 1px solid #444; height: 280px;
   }
-  
-  .t2338-hero-card:hover {
-    transform: translateY(-3px);
-    border-color: #ff9d4d;
-    box-shadow: 0 8px 25px rgba(255, 157, 77, 0.2);
-  }
-
-  .hero-bg-fire {
+  .fire-bg {
     background: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/2022-04-02-03_BSA-Campout-Down-Home-Ranch_-_120_of_128_2026225232198169575.jpeg') no-repeat center center;
-    background-size: cover;
-    min-height: 280px;
-    width: 100%;
-    animation: hubFireGlow 6s ease-in-out infinite;
+    background-size: cover; height: 100%; animation: fireHeroPulse 6s ease-in-out infinite;
   }
-
-  .hero-gradient-overlay {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
-    min-height: 280px;
-    padding: 30px 40px;
-    display: flex;
-    align-items: center;
+  .fire-overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+    height: 100%; padding: 0 40px; display: flex; align-items: center;
   }
-
-  .hero-content-box {
-    max-width: 650px;
-    border-left: 6px solid #ff9d4d; 
-    padding-left: 25px;
-  }
-
-  .hero-title {
-    margin: 0;
-    font-family: 'Arial Black', Gadget, sans-serif; 
-    font-size: 2.8rem;
-    color: #ffffff !important;
-    text-transform: uppercase;
-    font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: -1px;
-    text-shadow: 0 0 15px rgba(255, 120, 0, 0.5), 4px 4px 10px #000000;
-  }
-
-  .hero-subtitle {
-    margin: 12px 0 0 0;
-    font-family: Arial, sans-serif;
-    font-size: 1.4rem;
-    color: #ffffff !important;
-    font-weight: 700;
-  }
-
-  .hero-details-tag {
-    color: #ff9d4d !important;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 10px;
-    display: block;
-  }
-
   @media (max-width: 768px) {
-    .hero-bg-fire { min-height: 260px; display: flex; align-items: flex-end; }
-    .hero-gradient-overlay { 
-        min-height: auto;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
-        padding: 60px 20px 20px 20px;
-    }
-    .hero-title { font-size: 1.8rem; }
-    .hero-subtitle { font-size: 1.1rem; }
+    .fire-card-container { height: 260px; }
+    .fire-overlay { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0) 100%); align-items: flex-end; padding: 20px; }
   }
 </style>
 
-<a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62275&Custom_Form_ID=12&Application_ID=3562" class="t2338-hero-card">
-    <div class="hero-bg-fire">
-        <div class="hero-gradient-overlay">
-            <div class="hero-content-box">
-                <h2 class="hero-title">Be Prepared</h2>
-                <div class="hero-subtitle">Outdoor Resources & Packing Lists</div>
-                <div class="hero-details-tag">Checklists, Gear & Food</div>
+<a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62275&Custom_Form_ID=12&Application_ID=3562" class="fire-card-container">
+    <div class="fire-bg">
+        <div class="fire-overlay">
+            <div style="border-left: 6px solid #ff9d4d; padding-left: 25px;">
+                <h2 style="margin:0; font-family:'Arial Black'; font-size:2.8rem; color:#fff !important; text-transform:uppercase; font-weight:900; line-height:0.95; text-shadow: 2px 2px 10px #000;">Be Prepared</h2>
+                <div style="margin:12px 0 0 0; font-family:Arial; font-size:1.4rem; color:#fff !important; font-weight:700;">Outdoor Resources & Packing Lists</div>
+                <div style="color:#ff9d4d; font-family:Arial; font-size:1rem; font-weight:bold; text-transform:uppercase; letter-spacing:3px; margin-top:10px;">Checklists, Gear & Food</div>
             </div>
         </div>
     </div>
