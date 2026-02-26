@@ -54,11 +54,24 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 /* ============================== */
-/* GLOBAL STYLES          */
+/* GLOBAL STYLES - STICKY FONTS   */
+/* ============================== */
+body, .pagecontent, .container-fluid {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Ensure headings inherit the font but keep their intended color */
+h1, h2, h3, h4, .bodyheading, .page-title {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* This targets the 'reverting' text without overriding your white hero text */
+.bodytext, p, li {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
 body {
-  font-family: Arial, sans-serif;
   background-color: var(--color-light);
-  color: var(--color-dark);
   font-size: var(--font-md);
 }
 
@@ -69,7 +82,7 @@ body {
 }
 
 .container-fluid {
-  max-width: 1200px;
+  max-width: 1920px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -834,9 +847,10 @@ button.close:hover {
 /* DATA TABLE PENCIL COLUMN FIX   */
 /* ============================== */
 
-/* 1. Target the first column specifically in these scrolling divs */
-.scrollingdiv table tr td:first-child, 
-.scrollingdiv table tr th:first-child {
+/* 1. Only target the first column if it's inside a standard TWH data table */
+.scrollingdiv table.DataGrid tr td:first-child, 
+.scrollingdiv table.Grid tr td:first-child,
+.scrollingdiv table.CompactGrid tr td:first-child {
     width: 40px !important;
     min-width: 40px !important;
     max-width: 40px !important;
@@ -844,33 +858,15 @@ button.close:hover {
     padding: 4px !important;
 }
 
-/* 2. Stop the Pencil from floating or behaving weirdly */
+/* 2. Reset the Dashboard Cards to ensure they stay wide */
+.t2338-card {
+    min-width: 250px !important; /* Forces the card to ignore the 40px rule */
+    flex: 1 1 calc(33.333% - 12px) !important;
+}
+
+/* 3. Global Pencil Reset */
 .scrollingdiv .glyphicon-pencil {
-    position: static !important; /* Resets any previous 'absolute' or 'fixed' attempts */
+    position: static !important;
     float: none !important;
     display: inline-block !important;
-    margin: 0 auto !important;
-    transform: none !important;
-    color: var(--color-link) !important;
-}
-
-/* 3. Ensure the Table handles the horizontal space correctly */
-.scrollingdiv table {
-    table-layout: auto !important; /* Let the other columns expand naturally */
-    width: 100% !important;
-    border-collapse: collapse !important;
-}
-
-/* 4. Mobile Polish: Keep the Pencil from getting 'lost' on small screens */
-@media (max-width: 768px) {
-    .scrollingdiv {
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    /* Ensure the Date column (2nd child) has enough breathing room */
-    .scrollingdiv table tr td:nth-child(2) {
-        white-space: nowrap !important;
-        padding-left: 10px !important;
-    }
 }
