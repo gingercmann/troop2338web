@@ -11,23 +11,28 @@
     background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
     height: 100%; padding: 0 40px; display: flex; align-items: center;
   }
+  /* MOBILE FIX: Clear the image */
   @media (max-width: 768px) {
-    .cal-card-container { height: 260px; }
-    .cal-overlay { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0) 100%); align-items: flex-end; padding: 20px; }
+    .cal-card-container { height: 280px; }
+    .cal-overlay { 
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%); 
+      align-items: flex-end; 
+      padding: 20px; 
+    }
+    .cal-btn-row { flex-direction: column; gap: 8px !important; width: 100%; }
   }
 </style>
 
 <div class="cal-card-container">
     <div class="cal-bg">
         <div class="cal-overlay">
-            <div style="border-left: 6px solid #e0e0e0; padding-left: 25px;">
+            <div style="border-left: 6px solid #e0e0e0; padding-left: 20px; margin-bottom: 10px;">
                 <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=57972&Form_ID=271&Stack=2&Application_ID=3562" style="text-decoration:none;">
                     <h2 style="margin:0; font-family:'Arial Black'; font-size:2.8rem; color:#fff !important; text-transform:uppercase; font-weight:900; line-height:0.95; text-shadow: 2px 2px 10px #000;">Stay on Schedule</h2>
-                    <div style="margin:12px 0 0 0; font-family:Arial; font-size:1.4rem; color:#fff !important; font-weight:700;">Troop Calendar & Events</div>
                 </a>
-                <div style="margin-top: 20px; display: flex; gap: 15px;">
-                    <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=57973&Form_ID=7790&Stack=2&Application_ID=3562" style="color:#fff; border:2px solid #e0e0e0; padding:8px 15px; border-radius:6px; font-weight:bold; font-size:0.85rem; text-transform:uppercase; text-decoration:none;">Sign Up</a>
-                    <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=57973&Form_ID=1833&Stack=2&Application_ID=3562" style="color:#fff; border:2px solid #e0e0e0; padding:8px 15px; border-radius:6px; font-weight:bold; font-size:0.85rem; text-transform:uppercase; text-decoration:none;">Subscribe</a>
+                <div class="cal-btn-row" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=57973&Form_ID=7790&Stack=2&Application_ID=3562" style="color:#fff; border:2px solid #e0e0e0; padding:6px 12px; border-radius:4px; font-weight:bold; font-size:0.8rem; text-transform:uppercase; text-decoration:none; text-align:center;">Sign Up</a>
+                    <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=57973&Form_ID=1833&Stack=2&Application_ID=3562" style="color:#fff; border:2px solid #e0e0e0; padding:6px 12px; border-radius:4px; font-weight:bold; font-size:0.8rem; text-transform:uppercase; text-decoration:none; text-align:center;">Subscribe</a>
                 </div>
             </div>
         </div>
