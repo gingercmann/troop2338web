@@ -1,0 +1,43 @@
+<style>
+  .badge-card-container {
+    display: block; text-decoration: none !important; width: 100%; max-width: 1000px; margin: 20px auto;
+    border-radius: 12px; overflow: hidden; background: #000; border: 1px solid #444; height: 280px;
+  }
+  .badge-bg {
+    background: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_2026218135727673445.png') no-repeat center center;
+    background-size: cover; height: 100%;
+  }
+  .badge-overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+    height: 100%; padding: 0 40px; display: flex; align-items: center;
+  }
+  /* MOBILE FIX: Clear the image and stack text */
+  @media (max-width: 768px) {
+    .badge-card-container { height: auto; min-height: 260px; border-radius: 0; border-left: none; border-right: none; }
+    .badge-overlay { 
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.2) 100%); 
+      align-items: flex-end; 
+      padding: 30px 20px; 
+    }
+    .badge-title { font-size: 2.2rem !important; }
+    .badge-sub { font-size: 1rem !important; }
+  }
+</style>
+
+<a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61576&Stack=0&Custom_Form_ID=6&Application_ID=3562" class="badge-card-container">
+    <div class="badge-bg">
+        <div class="badge-overlay">
+            <div style="border-left: 6px solid #a80000; padding-left: 20px;">
+                <h2 class="badge-title" style="margin:0; font-family:'Arial Black'; font-size:2.8rem; color:#fff !important; text-transform:uppercase; font-weight:900; line-height:0.95; text-shadow: 2px 2px 10px #000;">Earn Your Badges</h2>
+                
+                <div class="badge-sub" style="margin:10px 0 0 0; font-family:Arial; font-size:1.2rem; color:#ffcc00 !important; font-weight:700; text-transform: uppercase; letter-spacing: 1px;">
+                    Start or finish your merit badges
+                </div>
+                
+                <p style="color: #e0e0e0; margin: 8px 0 0 0; font-weight: bold; font-size: 0.9rem;">
+                    Access the Merit Badge Hub here
+                </p>
+            </div>
+        </div>
+    </div>
+</a>
