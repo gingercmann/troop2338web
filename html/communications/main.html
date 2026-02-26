@@ -1,0 +1,145 @@
+<style>
+  .comm-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.2rem !important; 
+    line-height: 1.6;
+    color: #333;
+    /* Added to prevent the container itself from leaking */
+    width: 100%;
+    overflow: hidden;
+  }
+  .comm-grid, .qr-section-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .comm-card, .qr-card {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 280px; /* Lowered slightly for better phone fit */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Crucial for mobile padding */
+  }
+  .comm-card {
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-top: 8px solid #a80000;
+  }
+  .comm-card h2 {
+    text-align: left !important;
+    margin: 10px 0 20px 0;
+    color: #a80000;
+    font-weight: 900;
+    font-size: 1.8rem !important;
+  }
+  .age-warning-box {
+    background: #fff3f3;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 2px solid #cc0000;
+    font-size: 1.2rem;
+    color: #333;
+    flex-grow: 1;
+  }
+  .qr-section {
+    background: #2d2d2d;
+    padding: 30px 15px; /* Tighter padding for mobile */
+    border-radius: 16px;
+    color: #fff;
+  }
+  .qr-card {
+    background: #3d3d3d;
+    border: 1px solid #555;
+    text-align: center;
+  }
+  /* THE RESPONSIVE IMAGE FIX */
+  .qr-image-wrapper {
+    width: 100%;
+    max-width: 240px; /* Limits size on desktop */
+    margin: 0 auto;
+  }
+  .qr-image-wrapper img {
+    width: 100% !important; /* Forces image to fill the wrapper */
+    height: auto !important;
+    display: block;
+    border-radius: 12px;
+    border: 6px solid #fff;
+    box-sizing: border-box;
+  }
+  .who-joins {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: left;
+    border-left: 5px solid #ff4d4d;
+    flex-grow: 1;
+  }
+  @media (max-width: 600px) {
+    .comm-card, .qr-card { 
+      flex: 1 1 100% !important; 
+      min-width: 100% !important;
+    }
+    .comm-container { font-size: 1.1rem !important; }
+    .qr-section { padding: 20px 10px; }
+  }
+</style>
+
+<div class="comm-container">
+  <div class="comm-grid">
+    <div class="comm-card">
+      <div style="font-weight: 800; color: #555; margin-bottom: 5px; font-size: 0.9rem;">OFFICIAL RECORDS</div>
+      <h2>TroopWebHost</h2>
+      <p style="margin-bottom: 25px; flex-grow: 1;">The secure site for advancement, finances, and the official troop calendar. When you join Troop 2338, you will receive an email with login instructions. Need help? <a href=https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=51051&Form_ID=395&PreselectID=8&FK=8&Stack=2&Application_ID=3562>Contact the Webmasters.</p>
+      <a href="https://www.troopwebhost.org/mobile.htm" target="_blank" style="display:block; background:#a80000; color:#fff !important; text-align:center; padding:18px; border-radius:8px; font-weight:900; text-decoration:none; font-size: 1.2rem;">GET THE MOBILE APP</a>
+    </div>
+
+    <div class="comm-card">
+      <div style="font-weight: 800; color: #555; margin-bottom: 5px; font-size: 0.9rem;">REAL-TIME CHAT</div>
+      <h2>GroupMe</h2>
+      <div class="age-warning-box">
+        <strong>AGE REQUIREMENT: 13+</strong><br>
+        Parents must join the youth channel on behalf of Scouts under 13.
+      </div>
+      <a href="https://groupme.com" target="_blank" style="display:block; background:#393636; color:#fff !important; text-align:center; padding:18px; border-radius:8px; font-weight:900; text-decoration:none;">CREATE ACCOUNT</a>
+    </div>
+  </div>
+
+  <div class="qr-section">
+    <h2 style="color:#fff; text-align:center !important; margin-bottom:25px; font-weight: 900;">JOIN CHANNELS</h2>
+    
+    <div class="qr-section-grid">
+      <div class="qr-card">
+        <h3 style="color:#ff4d4d !important; text-transform: uppercase; font-weight: 900;">Adult Group</h3>
+        <div class="who-joins">
+          <strong>Who:</strong> Parents, Committee, and Leaders.  <a href="http://groupme.com/join_group/96655285/eko3BSCm" target="_blank" style="color:#fbf7f7; font-weight: 900;">Group 96655285</a>
+        </div>
+        <div class="qr-image-wrapper">
+          <a href="http://groupme.com/join_group/96655285/eko3BSCm" target="_blank">
+            <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/groupme-adults_20262231517449651707.jpg" alt="Adult Group QR">
+          </a>
+        </div>
+      </div>
+
+      <div class="qr-card">
+        <h3 style="color:#ff4d4d !important; text-transform: uppercase; font-weight: 900;">Youth Group</h3>
+        <div class="who-joins">
+          <strong>Who:</strong> Scouts (13+) and Scoutmasters. Parents of younger Scouts join here. <a href="http://groupme.com/join_group/98772153/eko3BSCm" target="_blank" style="color:#fbf7f7; font-weight: 900;">Group 98772153</a>
+        </div>
+        <div class="qr-image-wrapper">
+          <a href="http://groupme.com/join_group/98772153/NLfsAUda" target="_blank">
+            <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/groupme-scouts_20262231518299232990.jpg" alt="Youth Group QR">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
