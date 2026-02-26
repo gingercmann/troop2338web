@@ -1,178 +1,167 @@
 <style>
   .hub-container {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1100px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
   }
 
   .resource-card {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
     overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   }
 
-  /* LAYOUT: Essentials Image on Right */
-  .essentials-right { flex-direction: row-reverse; align-items: stretch; }
+  /* DESKTOP: REMAINS EXACTLY AS YOU PROVIDED */
+  .essentials-row { 
+    display: flex; 
+    flex-direction: row; 
+  }
+  
+  .resource-content { 
+    flex: 2 1 400px; 
+    padding: 30px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+  }
 
   .essentials-img-box {
-    flex: 1;
-    min-width: 500px;
-    background: #f8f9fa;
-    border-left: 1px solid #eee;
+    flex: 1 1 300px; 
+    background: #ffffff;
     cursor: zoom-in;
+    display: flex;
+    align-items: center;
   }
   
   .essentials-img-box img { 
     width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    height: auto !important; 
     display: block; 
-    min-height: 450px; 
   }
 
-  /* BOTTOM BLOCKS: Gear & Food columns */
-  .column-row { display: flex; gap: 30px; flex-wrap: wrap; }
-  .column-row .resource-card { flex: 1; min-width: 600px; }
-
-  /* ICONS: Using your preferred backpack style */
-  .icon-box {
-    width: 180px;
-    background: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid #eee;
-  }
-  .svg-icon { width: 80px; height: 80px; fill: #a80000; }
-
-  /* CONTENT: Centering text without overriding global font sizes */
-  .resource-content { 
-    flex: 1.2; 
-    padding: 50px; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-  }
-
-  .essentials-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 30px 0;
-    padding: 0;
-    list-style: none;
-    font-weight: 600;
-  }
-  .essentials-list li { padding-left: 20px; position: relative; }
-  .essentials-list li:before { content: "-"; color: #a80000; position: absolute; left: 0; font-weight: 900; }
-
-  .btn-row { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
-  .btn {
-    text-decoration: none !important;
-    padding: 16px 32px;
-    border-radius: 8px;
-    font-weight: 800;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  .btn-red { background: #a80000; color: #ffffff !important; }
-  .btn-gold { background: #ffcc00; color: #000000 !important; }
-
-  /* MODAL: Fixed aspect-ratio preview */
+  /* MODAL - NO DISTORTION */
   .modal-overlay {
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 100000;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.95);
-    align-items: center;
-    justify-content: center;
   }
-  .modal-overlay:target { display: flex; }
-  .modal-content { 
-    max-width: 85%; max-height: 85%; 
-    width: auto; height: auto;  
-    border: 4px solid #fff; border-radius: 8px; 
-    object-fit: contain; 
-  }
-  .close-modal { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 60px; font-weight: bold; text-decoration: none; }
+  .modal-overlay:target { display: flex; align-items: center; justify-content: center; }
+  .modal-content { max-width: 95vw; max-height: 90vh; width: auto !important; height: auto !important; border: 3px solid #fff; }
+  .close-btn { position: absolute; top: 10px; right: 20px; color: #fff; font-size: 50px; text-decoration: none; font-weight: bold; }
 
-  /* RESPONSIVE */
-  @media (max-width: 1400px) { .column-row .resource-card { min-width: 100%; } }
+  .essentials-list {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .essentials-list li { font-size: 16px; font-weight: bold; color: #333; padding-left: 18px; position: relative; }
+  .essentials-list li:before { content: "•"; color: #a80000; position: absolute; left: 0; }
+
+  .btn { display: inline-block; text-decoration: none !important; background: #a80000; color: #ffffff !important; padding: 12px 25px; border-radius: 4px; font-weight: bold; text-align: center; }
+
+  /* MOBILE FIXES */
   @media (max-width: 800px) {
-    .essentials-right { flex-direction: column-reverse; }
-    .essentials-img-box, .icon-box { width: 100%; height: auto; border: none; border-bottom: 1px solid #eee; }
-    .resource-content { text-align: center; padding: 30px; }
-    .btn-row { justify-content: center; }
+    .resource-card { border-radius: 0; border-left: none; border-right: none; }
+    .essentials-row { flex-direction: column; }
+    
+    /* 1. Fixes the top box ordering */
+    .essentials-row .resource-content { display: contents; } 
+    .mobile-head { order: 1; padding: 25px 20px 10px 20px; }
+    .essentials-img-box { order: 2; padding: 0; width: 100%; }
+    .mobile-list-box { order: 3; padding: 10px 20px 25px 20px; }
+
+    /* 2. FIXES THE BOTTOM BLOCKS (ZERO MARGIN ISSUE) */
+    .column-row .resource-card { 
+      padding: 20px; 
+      box-sizing: border-box; 
+    }
+    .column-row .resource-content { 
+      padding: 15px 0 0 0; /* Space between icon and text */
+    }
+
     .essentials-list { grid-template-columns: 1fr; }
+    h1 { font-size: 22px !important; }
+    .icon-box { display: block; width: auto; background: none; border: none; justify-content: flex-start; }
+  }
+
+  @media (min-width: 801px) {
+    .resource-card { border-radius: 12px; }
+    .column-row { display: flex; gap: 20px; }
+    .column-row .resource-card { flex: 1; }
+    .icon-box { width: 110px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; border-right: 1px solid #ddd; }
   }
 </style>
 
 <div class="hub-container">
-
-  <div id="img-preview" class="modal-overlay">
-    <a href="#" class="close-modal">&times;</a>
+  <div id="zoom-view" class="modal-overlay">
+    <a href="#" class="close-btn">&times;</a>
     <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/10essentials-packinglist_2026226105212704057.jpeg" class="modal-content">
   </div>
 
-  <div class="resource-card essentials-right">
-    <div class="essentials-img-box">
-      <a href="#img-preview"><img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/10essentials-packinglist_2026226105212704057.jpeg" alt="Essentials Preview"></a>
-    </div>
+  <div class="resource-card essentials-row">
     <div class="resource-content">
-      <h1>The 10 Outdoor Essentials</h1>
-      <p>Carry these on every hike and campout to Be Prepared.</p>
-      <ul class="essentials-list">
-        <li>Pocketknife (Requires Totin Chip)</li>
-        <li>First-Aid Kit</li>
-        <li>Extra Clothing</li>
-        <li>Rain Gear</li>
-        <li>Water Bottle</li>
-        <li>Flashlight</li>
-        <li>Trail Food</li>
-        <li>Fire Starter (Requires Firem'n Chit)</li>
-        <li>Sun Protection</li>
-        <li>Map & Compass</li>
-      </ul>
-      <div class="btn-row">
-        <a href="https://scoutlife.org/outdoors/outdoorarticles/6976/scout-outdoor-essentials-checklist/" target="_blank" class="btn btn-red">Scout Life Guide</a>
+      <div class="mobile-head">
+        <h1 style="color:#a80000; margin:0;">The 10 Outdoor Essentials</h1>
+        <p style="font-weight: bold; color: #555; margin-top: 5px;">Carry these on every hike and campout.</p>
       </div>
+
+      <div class="mobile-list-box">
+        <ul class="essentials-list">
+          <li>Pocketknife (Requires a Totin' Chip)</li>
+          <li>First-Aid Kit</li>
+          <li>Extra Clothing</li>
+          <li>Rain Gear</li>
+          <li>Water Bottle</li>
+          <li>Flashlight</li>
+          <li>Trail Food</li>
+          <li>Fire Starter (Requires a Firem'n Chit)</li>
+          <li>Sun Protection</li>
+          <li>Map & Compass</li>
+        </ul>
+        <div style="margin-top:10px;">
+          <a href="https://scoutlife.org/outdoors/outdoorarticles/6976/scout-outdoor-essentials-checklist/" target="_blank" class="btn">Full Online Guide</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="essentials-img-box">
+      <a href="#zoom-view">
+        <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/10essentials-packinglist_2026226105212704057.jpeg" alt="10 Essentials">
+      </a>
     </div>
   </div>
 
   <div class="column-row">
     <div class="resource-card">
       <div class="icon-box">
-        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M17.75 3c-.83 0-1.5.67-1.5 1.5V5h-8.5v-.5c0-.83-.67-1.5-1.5-1.5H3v18h18V3h-3.25zM19 19H5V5h1.25v.5c0 .83.67 1.5 1.5 1.5h8.5c.83 0 1.5-.67 1.5-1.5V5H19v14zM9 9h6v2H9V9zm0 4h6v2H9v-2z"/></svg>
+        <svg style="width:40px; height:40px; fill:#a80000;" viewBox="0 0 24 24"><path d="M17.75 3c-.83 0-1.5.67-1.5 1.5V5h-8.5v-.5c0-.83-.67-1.5-1.5-1.5H3v18h18V3h-3.25zM19 19H5V5h1.25v.5c0 .83.67 1.5 1.5 1.5h8.5c.83 0 1.5-.67 1.5-1.5V5H19v14zM9 9h6v2H9V9zm0 4h6v2H9v-2z"/></svg>
       </div>
       <div class="resource-content">
-        <h3>Gear & Equipment</h3>
-        <p>Master your setup. Beyond the essentials, ensure you have the right sleeping systems and footwear.</p>
-        <div class="btn-row">
-          <a href="https://drive.google.com/file/d/1HT0EPFm_2OQSL2S5kDVSqRyqEfZyQ_qm/view" target="_blank" class="btn btn-red">Download</a>
-          <a href="https://drive.google.com/file/d/1HT0EPFm_2OQSL2S5kDVSqRyqEfZyQ_qm/view" target="_blank" class="btn btn-gold">Preview</a>
-        </div>
+        <h3 style="margin:0;">Outdoor Gear & Packing Lists</h3>
+        <p style="margin: 10px 0; font-size: 14px; line-height: 1.4;">Access seasonal checklists for all gear and equipment to ensure you're always prepared.</p>
+        <a href="https://drive.google.com/file/d/1HT0EPFm_2OQSL2S5kDVSqRyqEfZyQ_qm/view" target="_blank" class="btn">Download Gear PDF</a>
       </div>
     </div>
 
     <div class="resource-card">
       <div class="icon-box">
-        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+        <svg style="width:40px; height:40px; fill:#a80000;" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
       </div>
       <div class="resource-content">
-        <h3>Trail Food & Nutrition</h3>
-        <p>High-energy snacks that pass the Crush Test. <strong>Note: There is no refrigeration on the trail.</strong></p>
-        <div class="btn-row">
-          <a href="https://drive.google.com/file/d/1t3SfHeqdkK-pjbOXvg-E8zGc8U0hmIUz/view" target="_blank" class="btn btn-red">Download</a>
-          <a href="https://drive.google.com/file/d/1t3SfHeqdkK-pjbOXvg-E8zGc8U0hmIUz/view" target="_blank" class="btn btn-gold">Preview</a>
-        </div>
+        <h3 style="margin:0;">Snacks & Brown Bag Meals</h3>
+        <p style="margin: 10px 0; font-size: 14px; line-height: 1.4;">Plan for snacks and family-provided meals. <strong>Note: Refrigeration is NOT offered</strong> on these trips.</p>
+        <a href="https://drive.google.com/file/d/1t3SfHeqdkK-pjbOXvg-E8zGc8U0hmIUz/view" target="_blank" class="btn">Download Food Info</a>
       </div>
     </div>
   </div>
