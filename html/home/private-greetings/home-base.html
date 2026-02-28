@@ -40,7 +40,6 @@
     margin-top: 12px;
     text-transform: uppercase;
   }
-  /* NEW: Small labels to guide users without breaking the grid */
   .t2338-label {
     font-size: 0.7rem;
     font-weight: 800;
@@ -56,6 +55,11 @@
       flex: 1 1 100%;
       height: 160px;
     }
+    .t2338-header-right {
+      width: 100%;
+      justify-content: flex-start !important;
+      margin-top: 10px;
+    }
   }
 </style>
 
@@ -66,14 +70,18 @@
             <h2 style="color: #222 !important; font-weight: 900; font-size: 1.8rem; margin: 0; text-transform: uppercase;">Home Base</h2>
             <p style="color: #666 !important; font-size: 0.9rem; margin: 0; font-weight: 600;">Troop 2338 Georgetown</p>
         </div>
-        <div style="background: #ffffff; padding: 4px 12px; border-radius: 20px; border: 1px solid #28a745; display: flex; align-items: center; gap: 6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="color: #28a745 !important; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Logged On</span>
+        
+        <div class="t2338-header-right" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end;">
+            <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62263&Stack=0&Custom_Form_ID=11&Application_ID=3562" style="background: #444; color: #ffffff !important; padding: 6px 14px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #222;">Get Connected</a>
+            
+            <div style="background: #ffffff; padding: 4px 12px; border-radius: 20px; border: 1px solid #28a745; display: flex; align-items: center; gap: 6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span style="color: #28a745 !important; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Logged On</span>
+            </div>
         </div>
     </div>
 
     <div class="t2338-card-container">
-        
         <div style="flex: 1 1 calc(33.333% - 12px); min-width: 250px;">
           <span class="t2338-label">Leaders / Adults</span>
           <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=57972" class="t2338-card" style="width:100%;">
@@ -130,8 +138,7 @@
     </div>
 
     <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62263&Stack=0&Custom_Form_ID=11&Application_ID=3562" class="t2338-wide-btn" style="background: #444; color: #ffffff !important; box-shadow: 0 3px 0 #222;">
-        Get Connected
-    </a>
+        Member Site, Calendar, and Chats    </a>
 
     <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45899" class="t2338-wide-btn" style="background: #a80000; color: #ffffff !important; box-shadow: 0 3px 0 #7a0000;">
         View Scout Status & Advancement
