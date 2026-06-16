@@ -14,15 +14,15 @@
     height: 180px; 
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #6c6565; /* BRAND: Troop 2338 Dark Grey */
     display: block;
-    background-color: #f0f0f0; 
+    background-color: #eaeaea; /* BRAND: Background Grey */
   }
   .t2338-img-contain {
     width: 100%;
     height: 100%;
     object-fit: contain; 
-    background-color: #748c6c; 
+    background-color: #6c6565; /* BRAND: Cleaned up messy placeholder green to Dark Grey */
   }
   .t2338-img-cover {
     width: 100%;
@@ -33,17 +33,18 @@
     display: block;
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
     font-weight: 800;
     font-size: 0.95rem;
     margin-top: 12px;
     text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
   }
   .t2338-label {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    color: #888;
+    color: #6c6565; /* BRAND: Troop 2338 Dark Grey */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
@@ -63,84 +64,99 @@
   }
 </style>
 
-<div id="T2338-HomeDashboard" style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 1200px; margin: 0 auto; background-color: #fcfcfc; padding: 20px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); box-sizing: border-box;">
+<!-- Main Container utilizes White background with Background Grey accents -->
+<div id="T2338-HomeDashboard" style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 1200px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 15px rgba(0,0,0,0.05); box-sizing: border-box;">
 
-    <div style="margin-bottom: 20px; border-bottom: 3px solid #a80000; padding-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <!-- Top Navigation Row -->
+    <div style="margin-bottom: 20px; border-bottom: 3px solid #cc0000; padding-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
-            <h2 style="color: #222 !important; font-weight: 900; font-size: 1.8rem; margin: 0; text-transform: uppercase;">Home Base</h2>
-            <p style="color: #666 !important; font-size: 0.9rem; margin: 0; font-weight: 600;">Troop 2338 Georgetown</p>
+            <h2 style="color: #393636 !important; font-weight: 900; font-size: 1.8rem; margin: 0; text-transform: uppercase;">Home Base</h2>
+            <p style="color: #6c6565 !important; font-size: 0.9rem; margin: 0; font-weight: 600;">Troop 2338 Georgetown</p>
         </div>
         
         <div class="t2338-header-right" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end;">
-            <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62263&Stack=0&Custom_Form_ID=11&Application_ID=3562" style="background: #444; color: #ffffff !important; padding: 6px 14px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #222;">Get Connected</a>
+            <!-- Get Connected Action Button -->
+            <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62263&Stack=0&Custom_Form_ID=11&Application_ID=3562" style="background: #393636; color: #ffffff !important; padding: 6px 14px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #6c6565;">Get Connected</a>
             
-            <div style="background: #ffffff; padding: 4px 12px; border-radius: 20px; border: 1px solid #28a745; display: flex; align-items: center; gap: 6px;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span style="color: #28a745 !important; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Logged On</span>
+            <!-- Logged On Success Node: Shifted from green to clear Brand Gold/Dark Text style -->
+            <div style="background: #ffd700; padding: 4px 12px; border-radius: 20px; border: 1px solid #6c6565; display: flex; align-items: center; gap: 6px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#393636" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span style="color: #393636 !important; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase;">Logged On</span>
             </div>
         </div>
     </div>
 
+    <!-- Cards Layout Grid -->
     <div class="t2338-card-container">
+        
+        <!-- Card 1: Adult Hub -->
         <div style="flex: 1 1 calc(33.333% - 12px); min-width: 250px;">
           <span class="t2338-label">Leaders / Adults</span>
           <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=57972" class="t2338-card" style="width:100%;">
-              <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/rick-and-sam_20262202146179417199.jpeg" class="img-responsive t2338-img-contain" style="background-color: #b5a38f;">
-              <div style="position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.75); padding: 8px;">
-                  <h3 style="margin: 0; font-size: 1rem; color: #fff !important; text-transform: uppercase; font-weight: 800; text-align: center;">Adult Hub</h3>
+              <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/rick-and-sam_20262202146179417199.jpeg" class="img-responsive t2338-img-contain">
+              <div style="position: absolute; bottom: 0; width: 100%; background: rgba(57,54,54,0.85); padding: 8px;">
+                  <h3 style="margin: 0; font-size: 1rem; color: #ffffff !important; text-transform: uppercase; font-weight: 800; text-align: center;">Adult Hub</h3>
               </div>
           </a>
         </div>
 
+        <!-- Card 2: Scout Hub -->
         <div style="flex: 1 1 calc(33.333% - 12px); min-width: 250px;">
           <span class="t2338-label">Scouts</span>
           <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=57973" class="t2338-card" style="width:100%;">
-              <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/michael-at-wehinahpey_20262202146176211153.jpg" class="img-responsive t2338-img-contain">
-              <div style="position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.75); padding: 8px;">
-                  <h3 style="margin: 0; font-size: 1rem; color: #fff !important; text-transform: uppercase; font-weight: 800; text-align: center;">Scout Hub</h3>
+              <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/20260209200918-2026-02-09_Eagle-Board-of-Review-7_2026210950566175370.JPG" class="img-responsive t2338-img-cover" style="object-position: top;">
+              <div style="position: absolute; bottom: 0; width: 100%; background: rgba(57,54,54,0.85); padding: 8px;">
+                  <h3 style="margin: 0; font-size: 1rem; color: #ffffff !important; text-transform: uppercase; font-weight: 800; text-align: center;">Scout Hub</h3>
               </div>
           </a>
         </div>
 
+        <!-- Card 3: Calendar Entry Splitting -->
         <div style="flex: 1 1 calc(33.333% - 12px); min-width: 250px;">
           <span class="t2338-label">Universal</span>
-          <div class="t2338-card" style="background-color: #fff; width:100%;">
+          <div class="t2338-card" style="background-color: #ffffff; width:100%;">
               <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=57972&Form_ID=271&Stack=2&Application_ID=3562">
                   <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/calendar-year-calendar-office-dates-preview_2026220211816437514.jpg" class="img-responsive t2338-img-cover" style="height: 140px; width: 100%;">
               </a>
-              <div style="position: absolute; bottom: 0; width: 100%; background: #ffffff; display: flex; border-top: 1px solid #d0d0d0;">
-                  <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=57972&Form_ID=271&Stack=2&Application_ID=3562" target="_blank" style="flex: 1.2; padding: 10px 2px; text-decoration: none; color: #a80000 !important; font-weight: 800; text-align: center; font-size: 0.85rem; text-transform: uppercase; border-right: 1px solid #d0d0d0;">Calendar</a>
-                  <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=45908" style="flex: 1; padding: 10px 2px; text-decoration: none; color: #555 !important; font-weight: 700; text-align: center; font-size: 0.8rem; text-transform: uppercase;">Subscribe</a>
+              <div style="position: absolute; bottom: 0; width: 100%; background: #ffffff; display: flex; border-top: 1px solid #6c6565;">
+                  <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=57972&Form_ID=271&Stack=2&Application_ID=3562" style="flex: 1.2; padding: 10px 2px; text-decoration: none; color: #cc0000 !important; font-weight: 800; text-align: center; font-size: 0.85rem; text-transform: uppercase; border-right: 1px solid #6c6565;">Calendar</a>
+                  <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=45908" style="flex: 1; padding: 10px 2px; text-decoration: none; color: #393636 !important; font-weight: 700; text-align: center; font-size: 0.8rem; text-transform: uppercase;">Subscribe</a>
               </div>
           </div>
         </div>
 
+        <!-- Card 4: Gear Checklists -->
         <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62275&Stack=0&Custom_Form_ID=12&Application_ID=3562" class="t2338-card">
             <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/gear_20262271516533652408.jpeg" class="img-responsive t2338-img-cover" style="object-position: top 30%;">
-            <div style="position: absolute; bottom: 0; width: 100%; background: #ffffff; padding: 6px 8px; border-top: 1px solid #d0d0d0; text-align: center;">
-                <h3 style="margin: 0; font-size: 0.95rem; color: #333 !important; text-transform: uppercase; font-weight: 800;">Gear UP! Camping checklists and more</h3>
+            <div style="position: absolute; bottom: 0; width: 100%; background: #ffffff; padding: 6px 8px; border-top: 1px solid #6c6565; text-align: center;">
+                <h3 style="margin: 0; font-size: 0.95rem; color: #393636 !important; text-transform: uppercase; font-weight: 800;">Gear UP! Camping checklists and more</h3>
             </div>
         </a>
 
+        <!-- Card 5: Photo Albums -->
         <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=61537&Stack=0&Custom_Form_ID=3&Application_ID=3562" class="t2338-card">
             <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/Photographer-Guides-from-NJspots-scaled_2026220212140384449.jpeg" class="img-responsive t2338-img-cover">
-            <div style="position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.75); padding: 8px;">
-                <h3 style="margin: 0; font-size: 1rem; color: #fff !important; text-transform: uppercase; font-weight: 800; text-align: center;">Photo Albums</h3>
+            <div style="position: absolute; bottom: 0; width: 100%; background: rgba(57,54,54,0.85); padding: 8px;">
+                <h3 style="margin: 0; font-size: 1rem; color: #ffffff !important; text-transform: uppercase; font-weight: 800; text-align: center;">Photo Albums</h3>
             </div>
         </a>
 
+        <!-- Card 6: Profile Updates -->
         <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=45903" class="t2338-card">
             <img src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/Krause-Fam-Wehinahpey_2026227122645960558.jpg" class="img-responsive t2338-img-cover">
-            <div style="position: absolute; bottom: 0; width: 100%; background: #ffffff; padding: 8px; border-top: 1px solid #d0d0d0;">
-                <h3 style="margin: 0; font-size: 0.95rem; color: #333 !important; text-transform: uppercase; font-weight: 800; text-align: center;">Update Profile</h3>
+            <div style="position: absolute; bottom: 0; width: 100%; background: #ffffff; padding: 8px; border-top: 1px solid #6c6565;">
+                <h3 style="margin: 0; font-size: 0.95rem; color: #393636 !important; text-transform: uppercase; font-weight: 800; text-align: center;">Update Profile</h3>
             </div>
         </a>
     </div>
 
-    <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62263&Stack=0&Custom_Form_ID=11&Application_ID=3562" class="t2338-wide-btn" style="background: #444; color: #ffffff !important; box-shadow: 0 3px 0 #222;">
-        Member Site, Calendar, and Chats    </a>
+    <!-- Bottom Primary Footer Button Actions -->
+    <a href="https://www.troopwebhost.org/formCustom.aspx?Menu_Item_ID=62263&Stack=0&Custom_Form_ID=11&Application_ID=3562" class="t2338-wide-btn" style="background: #6c6565; color: #ffffff !important; box-shadow: 0 3px 0 #393636;">
+        Member Site, Calendar, and Chats
+    </a>
 
-    <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45899" class="t2338-wide-btn" style="background: #a80000; color: #ffffff !important; box-shadow: 0 3px 0 #7a0000;">
+    <!-- Title Button: Gives an intentional visual focal point to advancement details -->
+    <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45899" class="t2338-wide-btn" style="background: #cc0000; color: #ffffff !important; box-shadow: 0 3px 0 #393636;">
         View Scout Status & Advancement
     </a>
 

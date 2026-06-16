@@ -2,68 +2,103 @@
   /* 1. Global Styles */
   .t2338-login-container {
     font-family: 'Segoe UI', Arial, sans-serif;
-    color: #333;
+    color: #393636; /* BRAND: Dark Text */
     line-height: 1.6;
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
   }
 
-  .login-hero {
-    width: 100%;
-    height: 380px;
-    background-image: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/20260209200846-2026-02-09_Eagle-Board-of-Review-1_2026220224423599673.jpg');
-    background-size: cover;
-    background-position: center 30%;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  /* Central Welcome Text Block */
+  .login-welcome-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 20px auto;
   }
 
-  .login-grid {
+  /* Photos Grid */
+  .login-top-photos-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center; /* Centers the two main columns */
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 25px;
   }
 
-  .login-main {
-    flex: 2;
-    min-width: 300px;
-    max-width: 600px; /* Prevents text from stretching too wide when centered */
-  }
-
-  .login-sidebar {
+  /* Balanced column sizing for the photos */
+  .login-photo-col {
     flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 12px;
-    border-top: 6px solid #a80000;
-    height: fit-content;
+    min-width: 300px;
+    max-width: 485px;
   }
 
-  h2, h3 { color: #a80000; margin-top: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+  /* Clean photo style maintaining full view and matched proportions */
+  .login-img-fullview {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #6c6565; /* BRAND: Troop 2338 Dark Grey border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  /* Bottom Action Section */
+  .login-bottom-actions {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  /* Headings unified under official troop branding */
+  h2, h3 { 
+    color: #cc0000; /* BRAND: Troop 2338 Red */
+    margin-top: 0; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+  }
+  h2 { font-size: 1.75rem; margin-bottom: 10px; }
+  h3 { font-size: 1.4rem; margin-bottom: 5px; }
   
-  p { font-size: 1.2rem !important; margin-bottom: 1.2em; color: #444; }
-  .small-note { font-size: 1rem !important; color: #666; font-style: italic; }
-  .t2338-link { color: #a80000; font-weight: bold; text-decoration: underline; }
+  p { font-size: 1.15rem !important; margin-bottom: 1em; color: #393636; /* BRAND: Dark Text */ }
+  
+  /* Centralized, cleaner support links layout */
+  .login-help-links-row {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #6c6565; /* BRAND: Troop 2338 Dark Grey */
+  }
+  .login-help-links-row a {
+    color: #cc0000; /* BRAND: Troop 2338 Red */
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .login-help-links-row a:hover {
+    color: #ffd700; /* BRAND: Troop 2338 Gold hover transition */
+  }
+
+  .t2338-link { 
+    color: #cc0000; /* BRAND: Troop 2338 Red */
+    font-weight: bold; 
+    text-decoration: underline; 
+  }
+  .t2338-link:hover {
+    color: #ffd700; /* BRAND: Troop 2338 Gold */
+  }
 
   /* Login Image Button Styling */
   .login-image-btn-container {
     text-align: center;
-    margin: 20px 0;
+    margin: 15px 0 5px 0;
   }
 
   .login-image-btn {
     display: inline-block;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
+    background: #ffffff; /* BRAND: White */
+    border: 1px solid #6c6565; /* BRAND: Troop 2338 Dark Grey */
+    padding: 12px 20px;
     border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     cursor: pointer;
     text-decoration: none;
   }
@@ -71,51 +106,61 @@
   .login-image-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-color: #a80000;
+    border-color: #cc0000; /* BRAND: Troop 2338 Red focus border */
   }
 
   @media only screen and (max-width: 768px) {
-    .login-hero { height: 220px; }
-    .login-grid { flex-direction: column; align-items: center; }
-    .login-main, .login-sidebar { max-width: 100%; }
-    p { font-size: 1.15rem !important; }
+    .login-top-photos-grid { flex-direction: column; align-items: center; }
+    .login-photo-col { max-width: 100%; width: 100%; }
   }
 </style>
 
 <div class="t2338-login-container">
   
-  <div class="login-hero"></div>
+  <!-- PHASE 1: Immediate Greeting Text -->
+  <div class="login-welcome-header">
+    <h2>Welcome to Troop 2338</h2>
+    <p>Based in Georgetown, Texas, we are proud members of the <a href="http://www.sangabrielscoutingcac.com" target="_blank" class="t2338-link">San Gabriel District</a>.</p>
+    <p>Interested in joining the adventure? We <strong>accept new members all year long</strong>. If you're ready to start your trail to Eagle, <a href="https://www.troop2338.com/join" target="_blank" class="t2338-link">come check us out</a>!</p>
+  </div>
 
-  <div class="login-grid">
+  <!-- PHASE 2: Visual Welcome Showcase (Uncropped, Side-by-Side Images) -->
+  <div class="login-top-photos-grid">
     
-    <div class="login-main">
-      <h2>Welcome to Troop 2338</h2>
-      <p>Based in Georgetown, Texas, we are proud members of the <a href="http://www.sangabrielscoutingcac.com" target="_blank" class="t2338-link">San Gabriel District</a>.</p>
-      
-      <p>Interested in joining the adventure? We <strong>accept new members all year long</strong>. If you're ready to start your trail to Eagle, <a href="https://www.troop2338.com/join" target="_blank" class="t2338-link">come check us out</a>!</p>
-
-      <hr style="border: 0; border-top: 1px solid #ddd; margin: 30px 0;">
-
-      <h3>Sign On</h3>
-      <p>Click the button below or look for the <strong>"Log On"</strong> link in the upper right corner of this page to access your account.</p>
-      
-      <div class="login-image-btn-container">
-        <a href="#" data-toggle="modal" data-target="#ModalLogon" class="login-image-btn">
-          <img class="img-responsive" alt="Click to Log On" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" style="height: 55px; width: auto; margin: 0 auto; display: block;" />
-          <div style="text-align: center; color: #a80000; font-weight: bold; margin-top: 10px; font-size: 0.9rem;">CLICK TO LOG ON</div>
-        </a>
-      </div>
-
-      <p class="small-note" style="margin-top: 20px;">First time? View the <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank">TroopWebHost Login Guide</a>.</p>
+    <!-- Left Photo Column (Eagle Board) -->
+    <div class="login-photo-col">
+      <img class="login-img-fullview" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/20260209200846-2026-02-09_Eagle-Board-of-Review-1_2026220224423599673.jpg" alt="Eagle Board of Review">
     </div>
 
-    <div class="login-sidebar">
-      <img class="img-responsive" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/rick-and-sam_20262202146179417199.jpeg" style="width: 100%; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" alt="Adult Leadership">
-      
-      <h4 style="margin: 0; color: #333; font-weight: 900; text-transform: uppercase; font-size: 1.1rem;">Login Support</h4>
-      <p style="font-size: 1.05rem !important; margin-top: 12px;">Scouts and parents: If you need your User ID or a password reset, please contact a troop leader.</p>
-      <p style="font-size: 1.05rem !important;">If you've forgotten your details, use the <em>"forgot username and password"</em> link on the login screen.</p>
+    <!-- Right Photo Column (Adult Leadership) -->
+    <div class="login-photo-col">
+      <img class="login-img-fullview" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/rick-and-sam_20262202146179417199.jpeg" alt="Adult Leadership">
     </div>
 
   </div>
+
+  <!-- PHASE 3: Functional Break & Login Infrastructure -->
+  <div class="login-bottom-actions">
+    <!-- BRAND: The line breaks into a clean Troop Gold color stripe to separate content -->
+    <hr style="border: 0; border-top: 2px solid #eaeaea; border-bottom: 1px solid #ffd700; margin: 0 auto 25px auto; max-width: 90%;">
+
+    <h3>Sign On</h3>
+    <p style="font-size: 1.05rem !important; margin-bottom: 5px; color: #393636;">
+      Click below or use the <strong>"Log On"</strong> link in the upper right corner of this page. 
+      <span style="display: block; font-size: 0.95rem; margin-top: 4px; color: #6c6565; font-style: italic;">Parents & Scouts: For password resets, contact a leader or use the link on the popup window.</span>
+    </p>
+    
+    <div class="login-image-btn-container">
+      <a href="#" data-toggle="modal" data-target="#ModalLogon" class="login-image-btn">
+        <img class="img-responsive" alt="Click to Log On" src="https://troopwebhost.blob.core.windows.net/troop2338georgetown/image_202572212145581201.png" style="height: 48px; width: auto; margin: 0 auto; display: block;" />
+        <!-- BRAND: Changed button text target to clear Troop Red -->
+        <div style="text-align: center; color: #cc0000; font-weight: bold; margin-top: 8px; font-size: 0.85rem;">CLICK TO LOG ON</div>
+      </a>
+    </div>
+
+    <div class="login-help-links-row">
+      <span>First time?</span> <a href="http://www.TroopWebHost.org/help.aspx?ID=3" target="_blank">View Login Guide</a>
+    </div>
+  </div>
+
 </div>
