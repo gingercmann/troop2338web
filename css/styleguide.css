@@ -1,0 +1,138 @@
+/* Use these classes to maintain a consistent look and feel across the website, especially when designing new components or pages with
+the help of chatbots. Copy / paste the CSS rules from this file into the chatbot and tell it to use these classes. */
+
+<style>
+  /* --- SYSTEM DESIGN & VARIABLES --- */
+  :root {
+    --t2338-red: #cc0000;
+    --t2338-gold: #ffd700;
+    --t2338-dark-grey: #6c6565;
+    --t2338-dark-text: #393636;
+    --t2338-bg-grey: #eaeaea;
+    --t2338-white: #ffffff;
+  }
+
+  /* --- BASE CONTAINER STYLES --- */
+  .t2338-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--t2338-dark-text);
+    line-height: 1.6;
+    background-color: var(--t2338-white);
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  /* --- TYPOGRAPHY --- */
+  .t2338-wrapper h1, 
+  .t2338-wrapper h2, 
+  .t2338-wrapper h3 {
+    color: var(--t2338-red);
+    margin-top: 0;
+    font-weight: 700;
+  }
+  
+  /* Fixed: Changed from gold to dark grey under the main H1 heading */
+  .t2338-wrapper h1 { border-bottom: 3px solid var(--t2338-dark-grey); padding-bottom: 8px; }
+  .t2338-wrapper h2 { border-bottom: 2px solid var(--t2338-bg-grey); padding-bottom: 5px; }
+
+  /* --- LAYOUT UTILITIES --- */
+  .t2338-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  /* --- COMPONENT STYLES --- */
+  /* Standard Card */
+  .t2338-card {
+    background-color: var(--t2338-bg-grey);
+    border-left: 5px solid var(--t2338-red);
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .t2338-card.gold-trim {
+    border-left-color: var(--t2338-gold);
+  }
+
+  /* Action Buttons */
+  .t2338-btn {
+    display: inline-block;
+    background-color: var(--t2338-red);
+    color: var(--t2338-white) !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s;
+    border: none;
+  }
+  
+  .t2338-btn:hover {
+    background-color: var(--t2338-dark-grey);
+  }
+
+  .t2338-btn-secondary {
+    display: inline-block;
+    background-color: var(--t2338-dark-grey);
+    color: var(--t2338-white) !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+  }
+
+  /* Alert/Notice Box */
+  .t2338-alert {
+    background-color: #fff9e6; /* Soft gold tint for readability */
+    border: 1px solid var(--t2338-gold);
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+
+  /* --- LIVE DEMO SWATCHES (Safe for AI Reference) --- */
+  .swatch-container { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; }
+  .swatch { padding: 10px; border-radius: 4px; font-size: 12px; font-weight: bold; text-align: center; min-width: 100px; }
+</style>
+
+<div class="t2338-wrapper">
+  
+  <h1>Troop 2338 Web Style Guide</h1>
+  <p>Welcome! This container serves as our official visual style guide. If you are using an AI chatbot to design a new page section, <strong>copy and paste the CSS rules from this container</strong> into the chatbot and tell it to use these classes.</p>
+
+  <h3>Our Color Palette</h3>
+  <div class="swatch-container">
+    <div class="swatch" style="background-color: #cc0000; color: #ffffff;">Red<br>#cc0000</div>
+    <div class="swatch" style="background-color: #ffd700; color: #393636;">Gold<br>#ffd700</div>
+    <div class="swatch" style="background-color: #6c6565; color: #ffffff;">Dark Grey<br>#6c6565</div>
+    <div class="swatch" style="background-color: #393636; color: #ffffff;">Dark Text<br>#393636</div>
+    <div class="swatch" style="background-color: #eaeaea; color: #393636;">BG Grey<br>#eaeaea</div>
+  </div>
+
+  <h2>Example Layout Components</h2>
+  <p>Below are examples of how elements should look to maintain a consistent Troop identity.</p>
+
+  <div class="t2338-grid">
+    <div class="t2338-card">
+      <h3>Upcoming Campout</h3>
+      <p>Check the calendar for the packing list, permission slips, and departure times for this weekend's event.</p>
+      <a href="#" class="t2338-btn">View Details</a>
+    </div>
+
+    <div class="t2338-card gold-trim">
+      <h3>Eagle Service Project</h3>
+      <p>Volunteers are needed this Saturday to help build the new community garden benches. Lunch will be provided.</p>
+      <a href="#" class="t2338-btn-secondary">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="t2338-alert">
+    <strong>Important Announcement Box:</strong> Use this layout style to highlight critical, time-sensitive information like weather delays or meeting location changes.
+  </div>
+
+</div>

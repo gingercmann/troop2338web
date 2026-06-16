@@ -870,3 +870,44 @@ button.close:hover {
     float: none !important;
     display: inline-block !important;
 }
+
+/* ============================================================ */
+/* CKEDITOR TABLE-CELL RECOVERY                                 */
+/* ============================================================ */
+
+/* 1. Prevent the 'center-block' from strangling the table */
+.center-block:has(.cke_chrome) {
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+/* 2. Force the table to allow the editor to expand */
+table.no-border:has(.cke_chrome) {
+    width: 100% !important;
+    table-layout: auto !important; /* Allows cells to grow based on content */
+}
+
+/* 3. Target the specific cell holding the editor */
+td.text-left:has(.cke_chrome) {
+    display: table-cell !important;
+    min-width: 600px !important; /* Editor needs at least this for the toolbar */
+    overflow: visible !important;
+}
+
+/* 4. Ensure the Editor UI itself isn't inheriting 'text-align: center' 
+   or other squashing properties from your custom styles */
+.cke_chrome {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    min-height: 400px !important;
+    text-align: left !important; /* Undo any parent centering */
+}
+
+/* 5. Force the editor's internal container to be seen */
+.cke_inner, .cke_contents {
+    display: block !important;
+    min-height: 300px !important;
+}
