@@ -1,0 +1,57 @@
+<style>
+  .hero-flex-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-card-restored {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #444;
+    height: 280px;
+    text-decoration: none !important;
+  }
+
+  .hero-bg-uniform {
+    background: url('https://troopwebhost.blob.core.windows.net/troop2338georgetown/class-a-banner_202607061725501798134.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+  }
+
+  .hero-overlay-restored {
+    background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .hero-card-restored { height: 260px; }
+    .hero-overlay-restored { 
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%); 
+      align-items: flex-end; 
+      padding: 20px; 
+    }
+  }
+</style>
+
+<div class="hero-flex-wrapper">
+  <a href="https://drive.google.com/file/d/1JGOYVH4GM3PkuIHf2GxMrvOjLza5ekgJ/view" target="_blank" class="hero-card-restored">
+      <div class="hero-bg-uniform">
+          <div class="hero-overlay-restored">
+              <div style="border-left: 6px solid #27ae60; padding-left: 20px; margin-bottom: 15px;">
+                  <h2 style="margin:0; font-family:'Arial Black', sans-serif; font-size:2.8rem; color:#fff !important; text-transform:uppercase; font-weight:900; line-height:0.95; text-shadow: 2px 2px 10px #000;">Your Uniform</h2>
+                  <div style="margin:6px 0 2px 0; font-family:Arial, sans-serif; font-size:1.3rem; color:#ffcc00 !important; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Badge & Patch Placement Guide</div>
+                  <div style="font-family:Arial, sans-serif; font-size:1rem; color:#fff !important; font-weight:400; text-transform:uppercase; letter-spacing:2px; opacity:0.9;">Class A, Class B & Attire Guidelines</div>
+              </div>
+          </div>
+      </div>
+  </a>
+</div>
