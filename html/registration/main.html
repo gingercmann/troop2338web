@@ -1,0 +1,55 @@
+<style type="text/css">
+  .reg-container { max-width: 1400px; margin: 0 auto; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+  .reg-grid { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
+  .reg-card-main { flex: 2; background: #ffffff; border-radius: 12px; padding: 30px; border: 2px solid #e0e0e0; border-top: 8px solid #a80000; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .reg-card-side { flex: 1; background: #fdfdfd; border-radius: 12px; padding: 30px; border: 2px solid #e0e0e0; }
+  
+  .reg-card-main h2 { color: #a80000; font-weight: 900; font-size: 1.8rem !important; margin: 0 0 20px 0; }
+  .reg-step { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid #a80000; transition: transform 0.2s; }
+  .reg-step:hover { transform: translateX(5px); }
+  
+  /* Styling specifically for the step options */
+  .step-options { margin-top: 8px; padding-left: 15px; }
+  .step-options a { font-weight: bold; }
+  
+  @media (max-width: 768px) {
+    .reg-card-main, .reg-card-side { flex: 1 1 100%; }
+  }
+</style>
+
+<div class="reg-container">
+  <div class="reg-grid">
+    <!-- LEFT SIDE: STEPS -->
+    <div class="reg-card-main">
+      <h2>Complete Your Registration</h2>
+      <p style="margin-bottom: 25px;">Please follow these steps in order to finalize your membership.</p>
+      
+      <div class="reg-step"><strong>Step 1:</strong> <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=45903&Stack=1&Application_ID=3562" target="_blank">Update your personal information</a></div>
+      <div class="reg-step"><strong>Step 2:</strong> <a href="https://www.troopwebhost.org/FormList.aspx?Menu_Item_ID=45899&Stack=2&Application_ID=3562" target="_blank">Update the contact information for each Scout</a></div>
+      
+      <!-- STEP 3 WITH GOOGLE DRIVE PACKET INCLUDED -->
+      <div class="reg-step" style="border-left-color: #27ae60;">
+        <strong>Step 3:</strong> Complete the Troop Registration forms
+        <div class="step-options">
+          • <a href="https://form.jotform.com/261811179003046" target="_blank">Complete Online via Jotform</a> 
+          <span style="margin: 0 8px; color: #888;">— OR —</span> 
+          • <a href="https://drive.google.com/open?id=1WugKlwuiU7r0OlCTa6V-2cl6Mt3lsaek&usp=drive_fs" target="_blank" style="color: #27ae60;">Download Paper Packet to Print</a>
+        </div>
+      </div>
+      
+      <div class="reg-step" style="border-left-color: #27ae60;"><strong>Step 4:</strong> <a href="https://filestore.scouting.org/filestore/HealthSafety/pdf/680-001_AB.pdf" target="_blank">Complete Medical Forms A/B</a></div>
+    </div>
+
+    <!-- RIGHT SIDE: HELPFUL CONTEXT -->
+    <div class="reg-card-side">
+      <h3 style="margin-top: 0; color: #555;">Need Assistance?</h3>
+      <p>If you encounter issues during this process, our administrative team is here to help.</p>
+      <a href="https://www.troopwebhost.org/FormDetail.aspx?Menu_Item_ID=51051&Form_ID=395&PreselectID=8&FK=8&Stack=2&Application_ID=3562" style="color: #a80000; font-weight: bold; text-decoration: underline;">Contact the Webmasters</a>
+      
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+      
+      <h3 style="color: #555;">What happens next?</h3>
+      <p>Once these forms are submitted, a committee member will review your records and reach out within 48 hours to confirm your enrollment.</p>
+    </div>
+  </div>
+</div>
